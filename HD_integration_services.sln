@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "HD_integration_services", "HD_integration_services\HD_integration_services.dtproj", "{A399F1FF-6420-4D20-B87D-EA429EBFE3F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A399F1FF-6420-4D20-B87D-EA429EBFE3F8}.Development|Default.ActiveCfg = Development
+		{A399F1FF-6420-4D20-B87D-EA429EBFE3F8}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1DC60AB6-D8B3-43E1-B991-11DCA943E8AC}
+	EndGlobalSection
+EndGlobal
