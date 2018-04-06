@@ -5,6 +5,13 @@ VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "HD_integration_services", "HD_integration_services\HD_integration_services.dtproj", "{A399F1FF-6420-4D20-B87D-EA429EBFE3F8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sources", "sources", "{E6D366DF-A299-4284-BA5A-D8B425821C6C}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\HD_projekt_event-tydz-1-listopad-2015_sample.txt = ..\..\..\Desktop\HD_projekt_event-tydz-1-listopad-2015_sample.txt
+		..\..\..\Desktop\HD_projekt_kategorie-kanałow.xlsx = ..\..\..\Desktop\HD_projekt_kategorie-kanałow.xlsx
+		..\..\..\Desktop\target.groups.csv = ..\..\..\Desktop\target.groups.csv
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Development|Default = Development|Default
