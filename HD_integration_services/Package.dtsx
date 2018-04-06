@@ -11,11 +11,22 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="50"
-  DTS:VersionGUID="{88E7751A-122E-48EB-A2BC-B275EF94A999}">
+  DTS:VersionBuild="54"
+  DTS:VersionGUID="{D5C75E3B-1393-4DA4-8262-CA94A1B4827A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{65540184-C487-4688-829C-20DBCEA716FB}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Daniel\source\repos\HD_projekt\sources\HD_projekt_kategorie-kanałow.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=NO&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
@@ -211,7 +222,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcIOOfvs/WUKbomNBsir73QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB59ZxISUOLOru0ekiaGfs1VDFVeXdNa9oX5UMpXRy3MwAAAAAOgAAAAAIAACAAAACBTGA4+adKfYrFgScHGvdiHHN5xeuCf8UlLEuY98T1hiAAAACkqFljENaHNqJGcOazSByTUXjcetGn1GobC9FPgU78f0AAAACZHbMFCyMrxtsYc4uSaSfaAYpFaLW3SRNtRWCZIZlHyL8ETjLGX+OhjjSddPlNh8OntfzTAQMV/2GHnRhfnNlW</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcIOOfvs/WUKbomNBsir73QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADpK0QvCoNWHL3BhR3XHDeKCalyLriKCTjVGPFM4f3NgQAAAAAOgAAAAAIAACAAAADR7l3LExuZIdPQtc9f2zSk+usGDyN6ZwRJ2MN92RQ6lCAAAAAEO9e9juBSqFRA1WFCI4ztskq6B4pai9DLldoUDUMYqEAAAADVFSwcAE7eXkqCksJDw6Inl0n/NzrDV51u8o2UJafc9C1Iq3PEHcChp9OpBmVBMWDA40gPtx2FWyHetmf7GYc0</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -221,6 +232,7 @@
     <DTS:Executable
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{64FB2C98-49D5-4FA3-8774-B5B9A933EFDA}"
       DTS:ExecutableType="Microsoft.Pipeline"
@@ -232,6 +244,125 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\Data Flow Task\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'grupy mediowe$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[F1]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[F1]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[F1]"
+                      name="F1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[F2]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[F2]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[F2]"
+                      name="F2"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[F1]"
+                      dataType="r8"
+                      name="F1" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[F2]"
+                      dataType="wstr"
+                      length="255"
+                      name="F2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[F1]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[F1]"
+                      name="F1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[F2]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[F2]"
+                      name="F2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\Data Flow Task\Flat File Source"
               componentClassID="Microsoft.FlatFileSource"
@@ -1232,18 +1363,148 @@
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Destination 2"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination 2"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[OLE Grupy.Mediowe]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Destination 2.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage.hd-admin]"
+                  connectionManagerRefId="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage.hd-admin]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\OLE DB Destination 2.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 2.Inputs[OLE DB Destination Input].Columns[F1]"
+                      cachedDataType="r8"
+                      cachedName="F1"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination 2.Inputs[OLE DB Destination Input].ExternalColumns[Nr]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[F1]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 2.Inputs[OLE DB Destination Input].Columns[F2]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="F2"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination 2.Inputs[OLE DB Destination Input].ExternalColumns[Nazwa]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[F2]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 2.Inputs[OLE DB Destination Input].ExternalColumns[Nr]"
+                      dataType="r8"
+                      name="Nr" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 2.Inputs[OLE DB Destination Input].ExternalColumns[Nazwa]"
+                      dataType="wstr"
+                      length="255"
+                      name="Nazwa" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Destination 2.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Destination 2.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 2.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination 2.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 2.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination 2.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
-              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="Flat File Source Output"
-              startId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
+              refId="Package\Data Flow Task.Paths[Excel Source Output]"
+              endId="Package\Data Flow Task\OLE DB Destination 2.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output1]"
+              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
               endId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
               name="Flat File Source Output"
               startId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output1]"
+              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1272,25 +1533,63 @@
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="180.8,41.6"
           Id="Package\Data Flow Task\OLE DB Destination 1"
           TopLeft="309.828574961059,158.399997082879" />
         <NodeLayout
-          Size="160.8,41.6"
-          Id="Package\Data Flow Task\Flat File Source 1"
-          TopLeft="313.028574961059,52.7999970828785" />
-        <NodeLayout
-          Size="152,41.6"
-          Id="Package\Data Flow Task\Flat File Source"
-          TopLeft="118.400000272478,42.2117647144621" />
+          Size="140,41.6"
+          Id="Package\Data Flow Task\Excel Source"
+          TopLeft="549.714295075864,64.2352950185228" />
         <NodeLayout
           Size="172,41.6"
           Id="Package\Data Flow Task\OLE DB Destination"
           TopLeft="108,159.2" />
+        <NodeLayout
+          Size="180.8,41.6"
+          Id="Package\Data Flow Task\OLE DB Destination 2"
+          TopLeft="581.028581296181,174.964708336167" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output1]"
+          Id="Package\Data Flow Task.Paths[Excel Source Output]"
+          TopLeft="619.714295075864,105.835295018523">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="51.7142862203174,69.1294133176441"
+              Start="0,0"
+              End="51.7142862203174,61.6294133176441">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.564706658822" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.564706658822"
+                    Point2="0,34.564706658822"
+                    Point3="4,34.564706658822" />
+                  <mssgle:LineSegment
+                    End="47.7142862203174,34.564706658822" />
+                  <mssgle:CubicBezierSegment
+                    Point1="47.7142862203174,34.564706658822"
+                    Point2="51.7142862203174,34.564706658822"
+                    Point3="51.7142862203174,38.564706658822" />
+                  <mssgle:LineSegment
+                    End="51.7142862203174,61.6294133176441" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="160.8,41.6"
+          Id="Package\Data Flow Task\Flat File Source 1"
+          TopLeft="313.028574961059,52.7999970828785" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
           TopLeft="396.828574961059,94.3999970828785">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1311,8 +1610,12 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\Data Flow Task\Flat File Source"
+          TopLeft="118.400000272478,42.2117647144621" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
+          Id="Package\Data Flow Task.Paths[Flat File Source Output1]"
           TopLeft="194.200000136239,83.8117647144621">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1337,6 +1640,19 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\OLE DB Destination 1">
     <Properties>
       <Property>
@@ -1350,7 +1666,20 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\Data Flow Task\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination 2">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
