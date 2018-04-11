@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="55"
-  DTS:VersionGUID="{250D72D4-38BF-4DF6-B0B5-337B118AD064}">
+  DTS:VersionBuild="65"
+  DTS:VersionGUID="{FA6356F7-0FD2-469F-8640-41F12130C5EF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -24,7 +24,7 @@
       DTS:ObjectName="Excel Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Daniel\source\repos\HD_projekt\sources\HD_projekt_kategorie-kanałow.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=NO&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Laptop\source\repos\HD_projekt\sources\HD_projekt_kategorie-kanałow.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=NO&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -41,7 +41,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1250"
-          DTS:ConnectionString="C:\Users\Daniel\source\repos\HD_projekt\sources\HD_projekt_event-tydz-1-listopad-2015_sample.txt">
+          DTS:ConnectionString="C:\Users\Laptop\source\repos\HD_projekt\sources\HD_projekt_event-tydz-1-listopad-2015_sample.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -50,7 +50,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;Date&quot;"
-              DTS:DTSID="{1BAD05EB-6A91-4818-A2CD-2B660B78FAAE}"
+              DTS:DTSID="{766D6BF5-B20B-4B82-9931-65CAAD932A94}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -59,7 +59,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;Channel&quot;"
-              DTS:DTSID="{7A742EEB-49C9-4D73-A17A-245F8030A18B}"
+              DTS:DTSID="{28FDE585-4AF2-4903-8EAA-1006B123177B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -68,7 +68,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;Description&quot;"
-              DTS:DTSID="{0E6FFA2D-272F-42F5-9281-54EEFFA52287}"
+              DTS:DTSID="{BEA39899-93A3-4790-93FA-B279954B0B68}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -77,7 +77,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;2nd Description&quot;"
-              DTS:DTSID="{1675AD6C-DC60-4261-841D-73C2AAC9E7D1}"
+              DTS:DTSID="{EB9F5502-993F-4AEC-B0C4-1434906D7608}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -86,7 +86,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;Start time&quot;"
-              DTS:DTSID="{00D7DFA1-C7CE-4563-A8BB-CEBBE89534D1}"
+              DTS:DTSID="{EED6D55B-5A5A-487C-86BF-48AB20A39E4D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -95,7 +95,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;Duration&quot;"
-              DTS:DTSID="{C2F0A4D8-C000-46F5-954A-14371460B650}"
+              DTS:DTSID="{E8E592E1-E761-4ACA-84F3-FE316E53759A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -104,7 +104,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;Variable Target&quot;"
-              DTS:DTSID="{A77524E7-48CC-4483-916F-5047504D038B}"
+              DTS:DTSID="{39BF48DB-3B5E-443A-9537-C916F560093C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -113,7 +113,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;Total Individuals&quot;"
-              DTS:DTSID="{D1038D5C-D935-44AB-871B-A7B067B629CF}"
+              DTS:DTSID="{C7D8E735-9D6C-4ED5-98C1-192095EC46C5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -122,7 +122,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;Podgrupa&quot;"
-              DTS:DTSID="{448ADEA9-AA7E-409B-B13B-660C9DB2005B}"
+              DTS:DTSID="{BF6E16BE-B2C0-4EC8-BBC9-377587909190}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -131,7 +131,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;A16-49&quot;"
-              DTS:DTSID="{5CA2C113-EAA8-4F96-B8B2-536C0BE8800D}"
+              DTS:DTSID="{38B4A2EA-8C32-40E0-92BD-491D0FF8673E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -140,7 +140,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;M16-49&quot;"
-              DTS:DTSID="{5F23F31A-5CCF-4F12-BCC3-1EB0C1F701D6}"
+              DTS:DTSID="{DFD4B9FF-D9ED-452C-95FF-ABAF82F0A3A1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -149,7 +149,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;A4-15&quot;"
-              DTS:DTSID="{205A4C28-42FC-4012-9013-E5DE17098BEB}"
+              DTS:DTSID="{C64A2E42-E454-453A-88FD-DDAAFD35E39D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -158,7 +158,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;A4-9&quot;"
-              DTS:DTSID="{7F5F8D66-2B9C-43F4-BBAF-39E4233F7AD2}"
+              DTS:DTSID="{726136A9-7636-4C3F-AD73-4F6591ED05E0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -167,7 +167,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 13"
-              DTS:DTSID="{810E1726-5C35-4864-9535-5BA318391F31}"
+              DTS:DTSID="{9914C556-D865-4FB5-9CD9-4783382305ED}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -187,7 +187,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1250"
-          DTS:ConnectionString="C:\Users\Daniel\Desktop\sources\target.groups.csv">
+          DTS:ConnectionString="C:\Users\Laptop\source\repos\HD_projekt\sources\target.groups.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -196,7 +196,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nazwa"
-              DTS:DTSID="{A7B92340-2F8E-43FF-9762-04E9CF5CA4B9}"
+              DTS:DTSID="{BEDEA3F7-FE50-4C16-AA71-4D4D6B230EE3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -205,7 +205,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Kod"
-              DTS:DTSID="{1A02BBEE-4D7D-4B7C-93FB-3A5E0E1D8F80}"
+              DTS:DTSID="{AFC1958B-D2A6-4C9C-A411-84073ED38F0D}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -222,7 +222,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcIOOfvs/WUKbomNBsir73QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA8TPodC/rq5oG0E5BKamboJEFv9u864ycldw98Mm3oYwAAAAAOgAAAAAIAACAAAABWbhL4W1S6jMjo5WAkPY9hvsrGmJBZRyAMkZ71hc0Q5CAAAACaUOrOiXgb1b1nzCycFpiQAojLSEYJ6affIrTyUW2wukAAAADN2O/fsuedmsizQ+xAdb3MVx8Cki99gWR11QJb+qzY4kUIpznspgjRxxtia4w8O1AiumB2GD1yTB1w0R+6vpoT</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWnyGTUtbMkW5jFeFuK4KSwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACuw6EwWRfA6mBs2KerLG40Kcrn/USbad+WiQB0jVSWoQAAAAAOgAAAAAIAACAAAADTUgVdx8GA4KoJ9XbBVMvKxfYdZQ2QPVoxN8/hLoxuTSAAAAAOPfcsrh+y06eC/xTKhzixzIL+a3EsEXoqDp03qPcmSEAAAADObPeGziD0ec/eDSbuCy/llQWKb4Y+pHWfBv9HCLhKJQOO6ybL69gCi/EJIia0nH+JBkZv5Lw+fxCy/5GeSDxa</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1501,7 +1501,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[OLE Grupy.Mediowe]</property>
+                  name="OpenRowset">[OLE Media_group]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1626,7 +1626,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[OLE Kategorie]</property>
+                  name="OpenRowset">[OLE DB Kategorie]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1791,101 +1791,35 @@
         <NodeLayout
           Size="180.8,41.6"
           Id="Package\Data Flow Task\OLE DB Destination 1"
-          TopLeft="222.685716334168,131.635290825161" />
-        <NodeLayout
-          Size="140,41.6"
-          Id="Package\Data Flow Task\Excel Source"
-          TopLeft="462.571436448973,37.470588760805" />
-        <NodeLayout
-          Size="172,41.6"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="20.8571413731088,132.435293742282" />
+          TopLeft="226.019049535047,130.248624147474" />
         <NodeLayout
           Size="180.8,41.6"
           Id="Package\Data Flow Task\OLE DB Destination 2"
           TopLeft="437.457150279746,144.376472613061" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output]"
-          TopLeft="530.214293364359,79.070588760805">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,65.3058838522557"
-              Start="0,0"
-              End="0,57.8058838522557">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,57.8058838522557" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="160.8,41.6"
-          Id="Package\Data Flow Task\Flat File Source 1"
-          TopLeft="225.885716334168,26.0352908251607" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="309.685716334168,67.6352908251607">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,64.0000000000001"
-              Start="0,0"
-              End="0,56.5000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,56.5000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
           Size="152,41.6"
           Id="Package\Data Flow Task\Flat File Source"
           TopLeft="31.2571416455868,15.4470584567443" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output1]"
-          TopLeft="107.057141509348,57.0470584567443">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,75.3882352855379"
-              Start="0,0"
-              End="0,67.8882352855379">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,67.8882352855379" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="180.8,41.6"
+          Id="Package\Data Flow Task\OLE DB Destination 3"
+          TopLeft="676.428582948081,182.000002552481" />
         <NodeLayout
           Size="148.8,41.6"
           Id="Package\Data Flow Task\Excel Source 1"
           TopLeft="687.85715457128,61.1764714462122" />
         <NodeLayout
-          Size="180.8,41.6"
-          Id="Package\Data Flow Task\OLE DB Destination 3"
-          TopLeft="676.428582948081,182.000002552481" />
+          Size="172,41.6"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="20.8571413731088,133.128627081125" />
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\Data Flow Task\Excel Source"
+          TopLeft="461.904769808797,38.8572554384919" />
+        <NodeLayout
+          Size="160.8,41.6"
+          Id="Package\Data Flow Task\Flat File Source 1"
+          TopLeft="225.885716334168,26.0352908251607" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Excel Source Output1]"
           TopLeft="764.542868759681,102.776471446212">
@@ -1908,37 +1842,89 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output]"
+          TopLeft="529.880960044272,80.4572554384919">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63.9192171745691"
+              Start="0,0"
+              End="0,56.4192171745691">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.4192171745691" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output1]"
+          TopLeft="107.057141509348,57.0470584567443">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,76.0815686243811"
+              Start="0,0"
+              End="0,68.5815686243811">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,68.5815686243811" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="306.285716334168,67.6352908251607">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.1333332008786,62.6133333223134"
+              Start="0,0"
+              End="10.1333332008786,55.1133333223134">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.3066666611567" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.3066666611567"
+                    Point2="0,31.3066666611567"
+                    Point3="4,31.3066666611567" />
+                  <mssgle:LineSegment
+                    End="6.13333320087855,31.3066666611567" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.13333320087855,31.3066666611567"
+                    Point2="10.1333332008786,31.3066666611567"
+                    Point3="10.1333332008786,35.3066666611567" />
+                  <mssgle:LineSegment
+                    End="10.1333332008786,55.1133333223134" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\OLE DB Destination 1">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Excel Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1964,6 +1950,19 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination 3">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Excel Source 1">
     <Properties>
       <Property>
@@ -1977,7 +1976,20 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination 3">
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Excel Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
