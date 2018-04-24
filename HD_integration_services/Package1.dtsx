@@ -11,11 +11,26 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="19"
-  DTS:VersionGUID="{467FAFF4-E605-432A-84D5-F07525C23229}">
+  DTS:VersionBuild="41"
+  DTS:VersionGUID="{495C43FA-6290-4CE1-B073-3FABAE03CC3A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage.hd-admin]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F1D4A221-D0C3-4FB9-BF9D-8CC818DD7B65}"
+      DTS:ObjectName="hd-stage-server.database.windows.net.hd-stage.hd-admin">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=hd-stage-server.database.windows.net;User ID=hd-admin;Initial Catalog=hd-stage;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcIOOfvs/WUKbomNBsir73QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABnLhUsbeufM3dlDPsoA5KxkTIiuevZVcLHJX52hu/MGQAAAAAOgAAAAAIAACAAAAB9hJmPNvUKK3mmMISYYuPIhTFLoxUf28nMcDkRL9LU5CAAAADQaMExrumHwdIYd19FBHJ72NbDvMuEtKkhPmicfLP6WUAAAAD/hFCQ+jy1D1X1OjVj16tG7EpmnkVRkCJsN46bxI1IHqg34LvN49iiHOljjv1I4kiGjzd5dSckJHfkRSCvLhHm</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[sever-hd.database.windows.net.HD-baza.admin-hd]"
       DTS:CreationName="OLEDB"
@@ -27,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0V1hBsbvA0ihd337JrI5RgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC1WhCg0BITf/Mbg5DQi5QyHy5MBpdQJIE5kgS26AD2yQAAAAAOgAAAAAIAACAAAADRTbjDyvby7nYlMO8wEXNZBpKteB1+4gLv5JKIaWV96SAAAAD2aTMny6Y8qwI9lb4U4QZcY1kZIiXW/7i/SoNs+VSf9UAAAAChk6huu4Je8k6bMJL4EpC+WPlK52nv40dVAjCH3ri5tlsXAiq+TxOADccXEm0NEjqxjoI0lb8CCZJ99+C2CaAM</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcIOOfvs/WUKbomNBsir73QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACmyr3VFSHt6+McL3dIlOP2VkMoAdAcY29MAdzzdye+5QAAAAAOgAAAAAIAACAAAADHRrvg39ic9uO/CvIOdmQxGwzwr/UBRaITnog5JFr6SiAAAABgHoiwM4tmQKiOnrIHddWeOb17SlCtz+l10KkI2TYBw0AAAADmw+PQw7V+gEAzr7UI7b+oIqpYwd//SiQCm6+SAgLd9ZGO3LFBgG0tl2xcGABgUW0EkGAq5rxwTUFKs2/nOV+n</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -35,20 +50,266 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Data Flow Task"
+      DTS:refId="Package\Channel kategorie"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{86A493B9-BA8B-4D6E-AF8F-1C0B511F2537}"
+      DTS:DTSID="{6245E4D3-0D3C-43F1-96FA-2B2C0BE97DF2}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task">
+      DTS:ObjectName="Channel kategorie"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
         <pipeline
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task\OLE DB Destination"
+              refId="Package\Channel kategorie\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Channel kategorie\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Channel kategorie\Conditional Split.Inputs[Conditional Split Input].Columns[Kanal]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Kanal"
+                      lineageId="Package\Channel kategorie\Sort.Outputs[Sort Output].Columns[Kanal]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Channel kategorie\Conditional Split.Outputs[Case 1]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Case 1"
+                  synchronousInputId="Package\Channel kategorie\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">![ISNULL](#{Package\Channel kategorie\Sort.Outputs[Sort Output].Columns[Kanal]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">!ISNULL(Kanal)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Channel kategorie\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Channel kategorie\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Channel kategorie\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Channel kategorie\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Channel kategorie\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Channel kategorie\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Channel kategorie\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Channel kategorie\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Channel kategorie\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Channel kategorie\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Channel kategorie\Data Conversion.Inputs[Data Conversion Input].Columns[Kategoria]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Kategoria"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Channel kategorie\Sort.Outputs[Sort Output].Columns[Kategoria]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Channel kategorie\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Channel kategorie\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Channel kategorie\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Kategoria]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Channel kategorie\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Kategoria]"
+                      name="Copy of Kategoria"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Channel kategorie\Sort.Outputs[Sort Output].Columns[Kategoria]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Channel kategorie\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Channel kategorie\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Channel kategorie\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Channel kategorie\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Channel kategorie\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Channel kategorie\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Channel kategorie\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Channel kategorie\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Channel kategorie\Derived Column.Inputs[Derived Column Input].Columns[Copy of Kategoria]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of Kategoria"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Channel kategorie\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Kategoria]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[SUBSTRING](#{Package\Channel kategorie\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Kategoria]},1,[FINDSTRING](#{Package\Channel kategorie\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Kategoria]},"category",1) - 2)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">SUBSTRING([Copy of Kategoria],1,FINDSTRING([Copy of Kategoria],"category",1) - 2)</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Channel kategorie\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Channel kategorie\Derived Column.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Channel kategorie\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Channel kategorie\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Channel kategorie\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Channel kategorie\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Channel kategorie\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Channel kategorie\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Channel kategorie\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -63,7 +324,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[target_group]</property>
+                  name="OpenRowset">[dbo].[channel_category]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -105,7 +366,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\Channel kategorie\OLE DB Destination.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[sever-hd.database.windows.net.HD-baza.admin-hd]"
                   connectionManagerRefId="Package.ConnectionManagers[sever-hd.database.windows.net.HD-baza.admin-hd]"
                   description="The OLE DB runtime connection used to access the database."
@@ -113,68 +374,54 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Channel kategorie\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Nazwa]"
+                      refId="Package\Channel kategorie\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Kategoria]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Nazwa"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tagr_name]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nazwa]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Kod]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Kod"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tage_code]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Kod]" />
+                      cachedName="Copy of Kategoria"
+                      externalMetadataColumnId="Package\Channel kategorie\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[chca_name]"
+                      lineageId="Package\Channel kategorie\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Kategoria]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tagr_name]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="tagr_name" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tage_code]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="tage_code" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tagr_id]"
+                      refId="Package\Channel kategorie\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[chca_id]"
                       dataType="i4"
-                      name="tagr_id" />
+                      name="chca_id" />
+                    <externalMetadataColumn
+                      refId="Package\Channel kategorie\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[chca_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="chca_name" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Channel kategorie\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Channel kategorie\OLE DB Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Channel kategorie\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Channel kategorie\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Channel kategorie\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Channel kategorie\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -183,7 +430,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\OLE DB Source"
+              refId="Package\Channel kategorie\OLE DB Source"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
@@ -198,7 +445,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Target.group]</property>
+                  name="OpenRowset">[dbo].[Kanal]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -232,87 +479,182 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{4573BC35-7FB0-462E-BF1B-06C7748B47B5}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage.hd-admin]"
+                  refId="Package\Channel kategorie\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage.hd-admin]"
+                  connectionManagerRefId="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage.hd-admin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]"
+                  refId="Package\Channel kategorie\OLE DB Source.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nazwa]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Channel kategorie\OLE DB Source.Outputs[OLE DB Source Output].Columns[Kanal]"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nazwa]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nazwa]"
-                      name="Nazwa"
+                      externalMetadataColumnId="Package\Channel kategorie\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Kanal]"
+                      length="255"
+                      lineageId="Package\Channel kategorie\OLE DB Source.Outputs[OLE DB Source Output].Columns[Kanal]"
+                      name="Kanal"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Kod]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Channel kategorie\OLE DB Source.Outputs[OLE DB Source Output].Columns[Kategoria]"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Kod]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Kod]"
-                      name="Kod"
+                      externalMetadataColumnId="Package\Channel kategorie\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Kategoria]"
+                      length="255"
+                      lineageId="Package\Channel kategorie\OLE DB Source.Outputs[OLE DB Source Output].Columns[Kategoria]"
+                      name="Kategoria"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nazwa]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Nazwa" />
+                      refId="Package\Channel kategorie\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Kanal]"
+                      dataType="wstr"
+                      length="255"
+                      name="Kanal" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Kod]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Kod" />
+                      refId="Package\Channel kategorie\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Kategoria]"
+                      dataType="wstr"
+                      length="255"
+                      name="Kategoria" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Channel kategorie\OLE DB Source.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nazwa]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nazwa]"
-                      name="Nazwa" />
+                      refId="Package\Channel kategorie\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Kanal]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Channel kategorie\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Kanal]"
+                      name="Kanal" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Kod]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Kod]"
-                      name="Kod" />
+                      refId="Package\Channel kategorie\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Kategoria]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Channel kategorie\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Kategoria]"
+                      name="Kategoria" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Channel kategorie\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Channel kategorie\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Channel kategorie\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Channel kategorie\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Channel kategorie\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Channel kategorie\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Channel kategorie\Sort.Inputs[Sort Input].Columns[Kanal]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Kanal"
+                      lineageId="Package\Channel kategorie\OLE DB Source.Outputs[OLE DB Source Output].Columns[Kanal]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Channel kategorie\Sort.Inputs[Sort Input].Columns[Kategoria]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Kategoria"
+                      lineageId="Package\Channel kategorie\OLE DB Source.Outputs[OLE DB Source Output].Columns[Kategoria]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Channel kategorie\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Channel kategorie\Sort.Outputs[Sort Output].Columns[Kanal]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Channel kategorie\Sort.Outputs[Sort Output].Columns[Kanal]"
+                      name="Kanal">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Channel kategorie\OLE DB Source.Outputs[OLE DB Source Output].Columns[Kanal]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Channel kategorie\Sort.Outputs[Sort Output].Columns[Kategoria]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Channel kategorie\Sort.Outputs[Sort Output].Columns[Kategoria]"
+                      name="Kategoria"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Channel kategorie\OLE DB Source.Outputs[OLE DB Source Output].Columns[Kategoria]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -321,22 +663,42 @@
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
-              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              refId="Package\Channel kategorie.Paths[Case 1]"
+              endId="Package\Channel kategorie\Derived Column.Inputs[Derived Column Input]"
+              name="Case 1"
+              startId="Package\Channel kategorie\Conditional Split.Outputs[Case 1]" />
+            <path
+              refId="Package\Channel kategorie.Paths[Data Conversion Output]"
+              endId="Package\Channel kategorie\Conditional Split.Inputs[Conditional Split Input]"
+              name="Data Conversion Output"
+              startId="Package\Channel kategorie\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Channel kategorie.Paths[Derived Column Output]"
+              endId="Package\Channel kategorie\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Channel kategorie\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Channel kategorie.Paths[OLE DB Source Output]"
+              endId="Package\Channel kategorie\Sort.Inputs[Sort Input]"
               name="OLE DB Source Output"
-              startId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]" />
+              startId="Package\Channel kategorie\OLE DB Source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Channel kategorie.Paths[Sort Output]"
+              endId="Package\Channel kategorie\Data Conversion.Inputs[Data Conversion Input]"
+              name="Sort Output"
+              startId="Package\Channel kategorie\Sort.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Data Flow Task 1"
+      DTS:refId="Package\Media group"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{F5B75F64-CAD0-4925-994A-DA7D86B89A33}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task 1"
+      DTS:ObjectName="Media group"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -344,7 +706,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task 1\Conditional Split"
+              refId="Package\Media group\Conditional Split"
               componentClassID="Microsoft.ConditionalSplit"
               contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
@@ -352,41 +714,47 @@
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input]"
+                  refId="Package\Media group\Conditional Split.Inputs[Conditional Split Input]"
                   description="Input to the Conditional Split Transformation"
                   name="Conditional Split Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Nr]"
+                      refId="Package\Media group\Conditional Split.Inputs[Conditional Split Input].Columns[Nr]"
                       cachedDataType="r8"
                       cachedName="Nr"
-                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nr]" />
+                      lineageId="Package\Media group\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nr]" />
+                    <inputColumn
+                      refId="Package\Media group\Conditional Split.Inputs[Conditional Split Input].Columns[Nazwa]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Nazwa"
+                      lineageId="Package\Media group\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nazwa]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task 1\Conditional Split.Outputs[Case 1]"
+                  refId="Package\Media group\Conditional Split.Outputs[Case 1]"
                   description="Output 1 of the Conditional Split Transformation"
                   errorOrTruncationOperation="Computation"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Case 1"
-                  synchronousInputId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input]"
+                  synchronousInputId="Package\Media group\Conditional Split.Inputs[Conditional Split Input]"
                   truncationRowDisposition="FailComponent">
                   <properties>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">![ISNULL](#{Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nr]})</property>
+                      name="Expression">[ISNULL](#{Package\Media group\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nr]}) &amp;&amp; ![ISNULL](#{Package\Media group\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nazwa]})</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">!ISNULL(Nr)</property>
+                      name="FriendlyExpression">ISNULL(Nr) &amp;&amp; !ISNULL(Nazwa)</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -395,11 +763,11 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task 1\Conditional Split.Outputs[Conditional Split Default Output]"
+                  refId="Package\Media group\Conditional Split.Outputs[Conditional Split Default Output]"
                   description="Default Output of the Conditional Split Transformation"
                   exclusionGroup="1"
                   name="Conditional Split Default Output"
-                  synchronousInputId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input]">
+                  synchronousInputId="Package\Media group\Conditional Split.Inputs[Conditional Split Input]">
                   <properties>
                     <property
                       dataType="System.Boolean"
@@ -408,23 +776,23 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task 1\Conditional Split.Outputs[Conditional Split Error Output]"
+                  refId="Package\Media group\Conditional Split.Outputs[Conditional Split Error Output]"
                   description="Error Output of the Conditional Split Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Conditional Split Error Output"
-                  synchronousInputId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input]">
+                  synchronousInputId="Package\Media group\Conditional Split.Inputs[Conditional Split Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      refId="Package\Media group\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Media group\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      refId="Package\Media group\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Media group\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -433,7 +801,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task 1\Data Conversion"
+              refId="Package\Media group\Data Conversion"
               componentClassID="Microsoft.DataConvert"
               contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Data Conversion"
@@ -441,39 +809,34 @@
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Data Flow Task 1\Data Conversion.Inputs[Data Conversion Input]"
+                  refId="Package\Media group\Data Conversion.Inputs[Data Conversion Input]"
                   name="Data Conversion Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion.Inputs[Data Conversion Input].Columns[Nazwa]"
+                      refId="Package\Media group\Data Conversion.Inputs[Data Conversion Input].Columns[Nazwa]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Nazwa"
-                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nazwa]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion.Inputs[Data Conversion Input].Columns[Nr]"
-                      cachedDataType="r8"
-                      cachedName="Nr"
-                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nr]" />
+                      lineageId="Package\Media group\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nazwa]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Output]"
+                  refId="Package\Media group\Data Conversion.Outputs[Data Conversion Output]"
                   exclusionGroup="1"
                   name="Data Conversion Output"
-                  synchronousInputId="Package\Data Flow Task 1\Data Conversion.Inputs[Data Conversion Input]">
+                  synchronousInputId="Package\Media group\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Nazwa]"
+                      refId="Package\Media group\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Nazwa]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="100"
-                      lineageId="Package\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Nazwa]"
+                      lineageId="Package\Media group\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Nazwa]"
                       name="Copy of Nazwa"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -481,27 +844,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nazwa]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Nr]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Nr]"
-                      name="Copy of Nr"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nr]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Media group\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nazwa]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -512,22 +855,22 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Error Output]"
+                  refId="Package\Media group\Data Conversion.Outputs[Data Conversion Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Data Conversion Error Output"
-                  synchronousInputId="Package\Data Flow Task 1\Data Conversion.Inputs[Data Conversion Input]">
+                  synchronousInputId="Package\Media group\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      refId="Package\Media group\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Media group\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      refId="Package\Media group\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Media group\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -536,7 +879,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task 1\OLE DB Destination"
+              refId="Package\Media group\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -593,7 +936,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task 1\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\Media group\OLE DB Destination.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[sever-hd.database.windows.net.HD-baza.admin-hd]"
                   connectionManagerRefId="Package.ConnectionManagers[sever-hd.database.windows.net.HD-baza.admin-hd]"
                   description="The OLE DB runtime connection used to access the database."
@@ -601,29 +944,29 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Media group\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Nazwa]"
+                      refId="Package\Media group\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Nazwa]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="Copy of Nazwa"
-                      externalMetadataColumnId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[megr_name]"
-                      lineageId="Package\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Nazwa]" />
+                      externalMetadataColumnId="Package\Media group\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[megr_name]"
+                      lineageId="Package\Media group\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Nazwa]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[megr_id]"
+                      refId="Package\Media group\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[megr_id]"
                       dataType="i4"
                       name="megr_id" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[megr_name]"
+                      refId="Package\Media group\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[megr_name]"
                       codePage="1252"
                       dataType="str"
                       length="100"
@@ -633,22 +976,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task 1\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Media group\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Media group\OLE DB Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task 1\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Media group\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task 1\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Media group\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task 1\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Media group\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task 1\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Media group\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -657,7 +1000,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task 1\OLE DB Source"
+              refId="Package\Media group\OLE DB Source"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
@@ -706,76 +1049,76 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task 1\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{4573BC35-7FB0-462E-BF1B-06C7748B47B5}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage.hd-admin]"
+                  refId="Package\Media group\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage.hd-admin]"
+                  connectionManagerRefId="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage.hd-admin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output]"
+                  refId="Package\Media group\OLE DB Source.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nr]"
+                      refId="Package\Media group\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nr]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nr]"
-                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nr]"
+                      externalMetadataColumnId="Package\Media group\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nr]"
+                      lineageId="Package\Media group\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nr]"
                       name="Nr"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nazwa]"
+                      refId="Package\Media group\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nazwa]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nazwa]"
+                      externalMetadataColumnId="Package\Media group\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nazwa]"
                       length="255"
-                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nazwa]"
+                      lineageId="Package\Media group\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nazwa]"
                       name="Nazwa"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nr]"
+                      refId="Package\Media group\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nr]"
                       dataType="r8"
                       name="Nr" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nazwa]"
+                      refId="Package\Media group\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nazwa]"
                       dataType="wstr"
                       length="255"
                       name="Nazwa" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Media group\OLE DB Source.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nr]"
+                      refId="Package\Media group\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nr]"
                       dataType="r8"
-                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nr]"
+                      lineageId="Package\Media group\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nr]"
                       name="Nr" />
                     <outputColumn
-                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nazwa]"
+                      refId="Package\Media group\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nazwa]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nazwa]"
+                      lineageId="Package\Media group\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nazwa]"
                       name="Nazwa" />
                     <outputColumn
-                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Media group\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Media group\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Media group\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Media group\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -786,20 +1129,315 @@
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task 1.Paths[Conditional Split Default Output]"
-              endId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="Conditional Split Default Output"
-              startId="Package\Data Flow Task 1\Conditional Split.Outputs[Conditional Split Default Output]" />
+              refId="Package\Media group.Paths[Case 1]"
+              endId="Package\Media group\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Case 1"
+              startId="Package\Media group\Conditional Split.Outputs[Case 1]" />
             <path
-              refId="Package\Data Flow Task 1.Paths[Data Conversion Output]"
-              endId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input]"
+              refId="Package\Media group.Paths[Data Conversion Output]"
+              endId="Package\Media group\Conditional Split.Inputs[Conditional Split Input]"
               name="Data Conversion Output"
-              startId="Package\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Output]" />
+              startId="Package\Media group\Data Conversion.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task 1.Paths[OLE DB Source Output]"
-              endId="Package\Data Flow Task 1\Data Conversion.Inputs[Data Conversion Input]"
+              refId="Package\Media group.Paths[OLE DB Source Output]"
+              endId="Package\Media group\Data Conversion.Inputs[Data Conversion Input]"
               name="OLE DB Source Output"
-              startId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output]" />
+              startId="Package\Media group\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Target group"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{86A493B9-BA8B-4D6E-AF8F-1C0B511F2537}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Target group">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Target group\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[target_group]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Target group\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[sever-hd.database.windows.net.HD-baza.admin-hd]"
+                  connectionManagerRefId="Package.ConnectionManagers[sever-hd.database.windows.net.HD-baza.admin-hd]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Target group\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Target group\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Nazwa]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Nazwa"
+                      externalMetadataColumnId="Package\Target group\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tagr_name]"
+                      lineageId="Package\Target group\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nazwa]" />
+                    <inputColumn
+                      refId="Package\Target group\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Kod]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Kod"
+                      externalMetadataColumnId="Package\Target group\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tage_code]"
+                      lineageId="Package\Target group\OLE DB Source.Outputs[OLE DB Source Output].Columns[Kod]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Target group\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tagr_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="tagr_name" />
+                    <externalMetadataColumn
+                      refId="Package\Target group\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tage_code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="tage_code" />
+                    <externalMetadataColumn
+                      refId="Package\Target group\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tagr_id]"
+                      dataType="i4"
+                      name="tagr_id" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Target group\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Target group\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Target group\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Target group\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Target group\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Target group\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Target group\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Target.group]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Target group\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage.hd-admin]"
+                  connectionManagerRefId="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage.hd-admin]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Target group\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Target group\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nazwa]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Target group\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nazwa]"
+                      length="50"
+                      lineageId="Package\Target group\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nazwa]"
+                      name="Nazwa"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Target group\OLE DB Source.Outputs[OLE DB Source Output].Columns[Kod]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Target group\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Kod]"
+                      length="50"
+                      lineageId="Package\Target group\OLE DB Source.Outputs[OLE DB Source Output].Columns[Kod]"
+                      name="Kod"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Target group\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nazwa]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Nazwa" />
+                    <externalMetadataColumn
+                      refId="Package\Target group\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Kod]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Kod" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Target group\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Target group\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nazwa]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Target group\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nazwa]"
+                      name="Nazwa" />
+                    <outputColumn
+                      refId="Package\Target group\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Kod]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Target group\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Kod]"
+                      name="Kod" />
+                    <outputColumn
+                      refId="Package\Target group\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Target group\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Target group\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Target group\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Target group.Paths[OLE DB Source Output]"
+              endId="Package\Target group\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Target group\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -818,55 +1456,59 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="151,42"
-          Id="Package\Data Flow Task"
-          TopLeft="5.5,5.5" />
+          Size="140,41.6"
+          Id="Package\Target group"
+          TopLeft="0.357142769560511,26.9117650061743" />
         <NodeLayout
-          Size="160,42"
-          Id="Package\Data Flow Task 1"
+          Size="136.8,41.6"
+          Id="Package\Media group"
           TopLeft="169,30" />
+        <NodeLayout
+          Size="163.2,41.6"
+          Id="Package\Channel kategorie"
+          TopLeft="372.000006335122,34.2588240098788" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Data Flow Task">
+    design-time-name="Package\Target group">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150,42"
-          Id="Package\Data Flow Task\OLE DB Source"
+          Size="150.4,41.6"
+          Id="Package\Target group\OLE DB Source"
           TopLeft="5.5,5.5" />
         <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="52.5,73.5" />
+          Size="170.4,41.6"
+          Id="Package\Target group\OLE DB Destination"
+          TopLeft="52.5,130.394118444977" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="80.5,47.5">
+          Id="Package\Target group.Paths[OLE DB Source Output]"
+          TopLeft="80.7,47.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="57.5,26"
+              EndConnector="57,83.294118444977"
               Start="0,0"
-              End="57.5,18.5">
+              End="57,75.794118444977">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,9" />
+                    End="0,37.6470592224885" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,9"
-                    Point2="0,13"
-                    Point3="4,13" />
+                    Point1="0,37.6470592224885"
+                    Point2="0,41.6470592224885"
+                    Point3="4,41.6470592224885" />
                   <mssgle:LineSegment
-                    End="53.5,13" />
+                    End="53,41.6470592224885" />
                   <mssgle:CubicBezierSegment
-                    Point1="53.5,13"
-                    Point2="57.5,13"
-                    Point3="57.5,17" />
+                    Point1="53,41.6470592224885"
+                    Point2="57,41.6470592224885"
+                    Point3="57,45.6470592224885" />
                   <mssgle:LineSegment
-                    End="57.5,18.5" />
+                    End="57,75.794118444977" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -879,7 +1521,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Source">
+    design-time-name="Package\Target group\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -892,7 +1534,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\Target group\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -905,74 +1547,52 @@
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\Data Flow Task 1">
+    design-time-name="Package\Media group">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="150,42"
-          Id="Package\Data Flow Task 1\OLE DB Source"
+          Size="150.4,41.6"
+          Id="Package\Media group\OLE DB Source"
           TopLeft="5.5,5.5" />
         <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task 1\OLE DB Destination"
-          TopLeft="274.5,156.5" />
+          Size="170.4,41.6"
+          Id="Package\Media group\OLE DB Destination"
+          TopLeft="231.3,283.7" />
         <NodeLayout
-          Size="156,42"
-          Id="Package\Data Flow Task 1\Data Conversion"
-          TopLeft="51,75" />
+          Size="154.4,41.6"
+          Id="Package\Media group\Conditional Split"
+          TopLeft="97.2,177.8" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\Media group\Data Conversion"
+          TopLeft="51,85.4" />
         <EdgeLayout
-          Id="Package\Data Flow Task 1.Paths[OLE DB Source Output]"
-          TopLeft="80.5,47.5">
+          Id="Package\Media group.Paths[OLE DB Source Output]"
+          TopLeft="80.7,47.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="48.5,27.5"
+              EndConnector="47.9,38.3"
               Start="0,0"
-              End="48.5,20">
+              End="47.9,30.8">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,9.75" />
+                    End="0,15.15" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,9.75"
-                    Point2="0,13.75"
-                    Point3="4,13.75" />
+                    Point1="0,15.15"
+                    Point2="0,19.15"
+                    Point3="4,19.15" />
                   <mssgle:LineSegment
-                    End="44.5,13.75" />
+                    End="43.9,19.15" />
                   <mssgle:CubicBezierSegment
-                    Point1="44.5,13.75"
-                    Point2="48.5,13.75"
-                    Point3="48.5,17.75" />
+                    Point1="43.9,19.15"
+                    Point2="47.9,19.15"
+                    Point3="47.9,23.15" />
                   <mssgle:LineSegment
-                    End="48.5,20" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="155,42"
-          Id="Package\Data Flow Task 1\Conditional Split"
-          TopLeft="54,153" />
-        <EdgeLayout
-          Id="Package\Data Flow Task 1.Paths[Data Conversion Output]"
-          TopLeft="130.25,117">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,36"
-              Start="0,0"
-              End="0,28.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.5" />
+                    End="47.9,30.8" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -982,32 +1602,80 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task 1.Paths[Conditional Split Default Output]"
-          TopLeft="209,175.75">
+          Id="Package\Media group.Paths[Data Conversion Output]"
+          TopLeft="128.6,127">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="65.5,0"
+              EndConnector="45.8,50.8"
               Start="0,0"
-              End="58,0">
+              End="45.8,43.3">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="58,0" />
+                    End="0,21.4" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.4"
+                    Point2="0,25.4"
+                    Point3="4,25.4" />
+                  <mssgle:LineSegment
+                    End="41.8,25.4" />
+                  <mssgle:CubicBezierSegment
+                    Point1="41.8,25.4"
+                    Point2="45.8,25.4"
+                    Point3="45.8,29.4" />
+                  <mssgle:LineSegment
+                    End="45.8,43.3" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Media group.Paths[Case 1]"
+          TopLeft="174.4,219.4">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="142.1,64.3"
+              Start="0,0"
+              End="142.1,56.8">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.15" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.15"
+                    Point2="0,32.15"
+                    Point3="4,32.15" />
+                  <mssgle:LineSegment
+                    End="138.1,32.15" />
+                  <mssgle:CubicBezierSegment
+                    Point1="138.1,32.15"
+                    Point2="142.1,32.15"
+                    Point3="142.1,36.15" />
+                  <mssgle:LineSegment
+                    End="142.1,56.8" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="55.8319140625,37.15,30.436171875,9.5537109375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task 1\OLE DB Source">
+    design-time-name="Package\Media group\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1020,7 +1688,237 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task 1\OLE DB Destination">
+    design-time-name="Package\Media group\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Channel kategorie">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\Channel kategorie\OLE DB Source"
+          TopLeft="165.6,63.2" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Channel kategorie\OLE DB Destination"
+          TopLeft="189.6,485.6" />
+        <NodeLayout
+          Size="97.6,41.6"
+          Id="Package\Channel kategorie\Sort"
+          TopLeft="206.4,157.6" />
+        <EdgeLayout
+          Id="Package\Channel kategorie.Paths[OLE DB Source Output]"
+          TopLeft="240.4,104.8">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="14.8,52.8"
+              Start="0,0"
+              End="14.8,45.3">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.4" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.4"
+                    Point2="0,26.4"
+                    Point3="4,26.4" />
+                  <mssgle:LineSegment
+                    End="10.8,26.4" />
+                  <mssgle:CubicBezierSegment
+                    Point1="10.8,26.4"
+                    Point2="14.8,26.4"
+                    Point3="14.8,30.4" />
+                  <mssgle:LineSegment
+                    End="14.8,45.3" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\Channel kategorie\Data Conversion"
+          TopLeft="242.4,243.2" />
+        <EdgeLayout
+          Id="Package\Channel kategorie.Paths[Sort Output]"
+          TopLeft="255.2,199.2">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="64.8,44"
+              Start="0,0"
+              End="64.8,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18"
+                    Point2="0,22"
+                    Point3="4,22" />
+                  <mssgle:LineSegment
+                    End="60.8,22" />
+                  <mssgle:CubicBezierSegment
+                    Point1="60.8,22"
+                    Point2="64.8,22"
+                    Point3="64.8,26" />
+                  <mssgle:LineSegment
+                    End="64.8,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Channel kategorie\Conditional Split"
+          TopLeft="209.6,331.2" />
+        <EdgeLayout
+          Id="Package\Channel kategorie.Paths[Data Conversion Output]"
+          TopLeft="320,284.8">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-33.2,46.4"
+              Start="0,0"
+              End="-33.2,38.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.2"
+                    Point2="0,23.2"
+                    Point3="-4,23.2" />
+                  <mssgle:LineSegment
+                    End="-29.2,23.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-29.2,23.2"
+                    Point2="-33.2,23.2"
+                    Point3="-33.2,27.2" />
+                  <mssgle:LineSegment
+                    End="-33.2,38.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Channel kategorie\Derived Column"
+          TopLeft="188,401.6" />
+        <EdgeLayout
+          Id="Package\Channel kategorie.Paths[Case 1]"
+          TopLeft="286.8,372.8">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-22.4,28.8"
+              Start="0,0"
+              End="-22.4,21.3">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.4" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.4"
+                    Point2="0,14.4"
+                    Point3="-4,14.4" />
+                  <mssgle:LineSegment
+                    End="-18.4,14.4" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.4,14.4"
+                    Point2="-22.4,14.4"
+                    Point3="-22.4,18.4" />
+                  <mssgle:LineSegment
+                    End="-22.4,21.3" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-26.4180859375,19.4,30.436171875,9.5537109375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Channel kategorie.Paths[Derived Column Output]"
+          TopLeft="264.4,443.2">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.4,42.4"
+              Start="0,0"
+              End="10.4,34.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.2"
+                    Point2="0,21.2"
+                    Point3="4,21.2" />
+                  <mssgle:LineSegment
+                    End="6.40000000000003,21.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.40000000000003,21.2"
+                    Point2="10.4,21.2"
+                    Point3="10.4,25.2" />
+                  <mssgle:LineSegment
+                    End="10.4,34.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Channel kategorie\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Channel kategorie\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
