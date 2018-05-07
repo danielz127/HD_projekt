@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="165"
-  DTS:VersionGUID="{3174E4E5-41A4-4C79-B489-1D931845BFCC}">
+  DTS:VersionBuild="166"
+  DTS:VersionGUID="{39DAE1DE-D603-4287-B7E3-893DF2659EFE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -366,7 +366,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWnyGTUtbMkW5jFeFuK4KSwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACiXrg405Id9JtiDa0HmKWaH9lqqV5BCMTJ63WZxuJGeQAAAAAOgAAAAAIAACAAAAA5+aZPh9j3IU5zRnPg1jjnxM3y1HvtoX92xEsP6ar2eCAAAADzfFvTDosPRyaP7kh8sHRlxGzeNuTKaS3nAgUvuNkTTUAAAACia/2jAVaGhogaIXzhdPIJyBRjlGOA6+4mMyWe1DleQsHEF3o9GiharICh9fzr+wUonsr4vQB/jKv7cUcF4apI</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWnyGTUtbMkW5jFeFuK4KSwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAXaZBFOqA8lJxjDxAD6W2tIsR9AieyXuCWlKosZFBfAwAAAAAOgAAAAAIAACAAAADkqYspl++Ly8b0IOPpe7zAjznxzjBOUB5gdq94tj8mFCAAAAAtYgGxcR+fgTW+hwMjSRQZP0ODTde8di3dqTmLImXDLUAAAACMaJ1dXfKb1I68w1fzqT9BO29KOOLz8fDQxiZO/b86R9ntZNSVIPnvlRfa4XOVEHEaf7n4NDUjCFl109Mr7fI3</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -381,7 +381,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWnyGTUtbMkW5jFeFuK4KSwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADVV5JprMjebKKTbSWOQCdTib1WSE8LaLRRXzQe6knXtQAAAAAOgAAAAAIAACAAAAA586Cj2zaO9dENQKQJK3VLBSHWzSkYvYSrQbuYepFBKSAAAAAop2GN2EZPCkDSc3k70Pg2rlEHalrtr2ktrP3HQy6G5UAAAABFqaWoqGyhIJ+GF6GiBR1mztkdMOqJqotWn27Isbd+f4fs4bt5HI5x3MG+qjbSHHO1pgQn43BuElK8Ebh3EWGt</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWnyGTUtbMkW5jFeFuK4KSwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAIF7XPx2OdyjJJjJzQBqk+qt4AGrUuihEPRS7S7CZLAgAAAAAOgAAAAAIAACAAAAD7Gj+eO6Iiq8OLKiJ+RrDXl7FAAbBTC9VE6S+WB7amzCAAAAArUNKlDN7bow2idfFI2YH/8QwbfA8Rn4HGKtyp7/bRlUAAAAAWI8U38RGUzKsEVmSRBYtXiz+IgxJzvg3X4ed8XZeCp9BpiRUVTki/Lu88t6FmS7idGXLJU1R8jhiS3DfuMxJp</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -2983,54 +2983,54 @@
               startId="Package\Channel\Conditional Split 2.Outputs[nazwa_z_]" />
             <path
               refId="Package\Channel.Paths[OLE DB Source Output3]"
-              endId="Package\Channel\Conditional Split.Inputs[Conditional Split Input]"
-              name="OLE DB Source Output"
-              startId="Package\Channel\OLE DB Source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Channel.Paths[OLE DB Source Output2]"
-              endId="Package\Channel\Sort 4.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Channel\OLE DB Source 3.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Channel.Paths[OLE DB Source Output]"
-              endId="Package\Channel\Sort.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Channel\OLE DB Source 1.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Channel.Paths[OLE DB Source Output1]"
               endId="Package\Channel\Conditional Split 1.Inputs[Conditional Split Input]"
               name="OLE DB Source Output"
               startId="Package\Channel\OLE DB Source 2.Outputs[OLE DB Source Output]" />
             <path
+              refId="Package\Channel.Paths[OLE DB Source Output2]"
+              endId="Package\Channel\Sort.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Channel\OLE DB Source 1.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Channel.Paths[OLE DB Source Output]"
+              endId="Package\Channel\Conditional Split.Inputs[Conditional Split Input]"
+              name="OLE DB Source Output"
+              startId="Package\Channel\OLE DB Source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Channel.Paths[OLE DB Source Output1]"
+              endId="Package\Channel\Sort 4.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Channel\OLE DB Source 3.Outputs[OLE DB Source Output]" />
+            <path
               refId="Package\Channel.Paths[Sort Output5]"
+              endId="Package\Channel\Merge Join 2.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Channel\Sort 3.Outputs[Sort Output]" />
+            <path
+              refId="Package\Channel.Paths[Sort Output]"
               endId="Package\Channel\Merge Join 2.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Channel\Sort 4.Outputs[Sort Output]" />
             <path
-              refId="Package\Channel.Paths[Sort Output]"
+              refId="Package\Channel.Paths[Sort Output1]"
               endId="Package\Channel\Merge Join.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Channel\Sort 1.Outputs[Sort Output]" />
             <path
-              refId="Package\Channel.Paths[Sort Output1]"
+              refId="Package\Channel.Paths[Sort Output2]"
               endId="Package\Channel\Merge Join 1.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Channel\Sort 5.Outputs[Sort Output]" />
             <path
-              refId="Package\Channel.Paths[Sort Output2]"
+              refId="Package\Channel.Paths[Sort Output3]"
               endId="Package\Channel\Merge Join 1.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Channel\Sort 2.Outputs[Sort Output]" />
             <path
-              refId="Package\Channel.Paths[Sort Output3]"
+              refId="Package\Channel.Paths[Sort Output4]"
               endId="Package\Channel\Merge Join.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Channel\Sort.Outputs[Sort Output]" />
-            <path
-              refId="Package\Channel.Paths[Sort Output4]"
-              endId="Package\Channel\Merge Join 2.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\Channel\Sort 3.Outputs[Sort Output]" />
             <path
               refId="Package\Channel.Paths[Union All Output 1]"
               endId="Package\Channel\Derived Column 1.Inputs[Derived Column Input]"
@@ -10066,19 +10066,19 @@
               startId="Package\Event\Conditional Split 2.Outputs[nazwa_z_]" />
             <path
               refId="Package\Event.Paths[OLE DB Source Output1]"
-              endId="Package\Event\Conditional Split 2.Inputs[Conditional Split Input]"
-              name="OLE DB Source Output"
-              startId="Package\Event\OLE DB Source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Event.Paths[OLE DB Source Output2]"
               endId="Package\Event\Sort 2.Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\Event\OLE DB Source 1 1.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Event.Paths[OLE DB Source Output]"
+              refId="Package\Event.Paths[OLE DB Source Output2]"
               endId="Package\Event\Sort 1.Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\Event\OLE DB Source 1.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Event.Paths[OLE DB Source Output]"
+              endId="Package\Event\Conditional Split 2.Inputs[Conditional Split Input]"
+              name="OLE DB Source Output"
+              startId="Package\Event\OLE DB Source.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Event.Paths[Pivot Default Output]"
               endId="Package\Event\Row Sampling.Inputs[Row Sampling Input 1]"
@@ -11152,7 +11152,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Channel.Paths[Sort Output]"
+          Id="Package\Channel.Paths[Sort Output1]"
           TopLeft="328.361905580421,411.105887535122">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11188,7 +11188,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Channel.Paths[Sort Output5]"
+          Id="Package\Channel.Paths[Sort Output]"
           TopLeft="583.009521300452,504.337777838389">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11224,7 +11224,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Channel.Paths[Sort Output4]"
+          Id="Package\Channel.Paths[Sort Output5]"
           TopLeft="819.231743496183,511.822222222222">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11260,7 +11260,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Channel.Paths[Sort Output3]"
+          Id="Package\Channel.Paths[Sort Output4]"
           TopLeft="425.104764445731,342.588239515364">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11296,7 +11296,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Channel.Paths[Sort Output2]"
+          Id="Package\Channel.Paths[Sort Output3]"
           TopLeft="389.89841016285,554.488888888889">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11332,7 +11332,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Channel.Paths[Sort Output1]"
+          Id="Package\Channel.Paths[Sort Output2]"
           TopLeft="615.238070790731,638.400002692086">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11368,7 +11368,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Channel.Paths[OLE DB Source Output]"
+          Id="Package\Channel.Paths[OLE DB Source Output2]"
           TopLeft="405.295235189883,57.1764699876515">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11404,7 +11404,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Channel.Paths[OLE DB Source Output1]"
+          Id="Package\Channel.Paths[OLE DB Source Output3]"
           TopLeft="893.409521387494,359.811764228275">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11440,7 +11440,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Channel.Paths[OLE DB Source Output3]"
+          Id="Package\Channel.Paths[OLE DB Source Output]"
           TopLeft="231.066664452239,54.1647055649015">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11476,7 +11476,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Channel.Paths[OLE DB Source Output2]"
+          Id="Package\Channel.Paths[OLE DB Source Output1]"
           TopLeft="582.720632398318,426.488888888889">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12465,7 +12465,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Event.Paths[OLE DB Source Output2]"
+          Id="Package\Event.Paths[OLE DB Source Output1]"
           TopLeft="582.266652414534,55.839999305725">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12499,7 +12499,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Event.Paths[OLE DB Source Output1]"
+          Id="Package\Event.Paths[OLE DB Source Output]"
           TopLeft="186.53333463139,51.6266663966708">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12533,7 +12533,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Event.Paths[OLE DB Source Output]"
+          Id="Package\Event.Paths[OLE DB Source Output2]"
           TopLeft="397.066654083464,57.5466667933994">
           <EdgeLayout.Curve>
             <mssgle:Curve
