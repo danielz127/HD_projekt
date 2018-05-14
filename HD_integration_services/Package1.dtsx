@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="297"
-  DTS:VersionGUID="{80D83881-3D42-441B-AE07-2DE9A2089E13}">
+  DTS:VersionBuild="298"
+  DTS:VersionGUID="{A12C656F-2CBF-4974-934B-D1C923FCB356}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1181,7 +1181,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWnyGTUtbMkW5jFeFuK4KSwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABzbn6pOM+zPW6EglwcTmklMfINY8EX2AayEJ4YhKrFSwAAAAAOgAAAAAIAACAAAADywQtquPmkVh+Z+Los1t41Z0ThiY1PKzlQhDNt9bqfmyAAAACtx7cSrGPPtIJ8TPd4/ipjMFsy3OXxrxMCAsZmO6w7jkAAAAAviFm/2nFo0HpAsQhsHkygZJoa0QLx26HNFMViMjzv+fdjgQVy9AbS5LnqV0WW9eFu09rAUcp7C51Hae3zRs65</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWnyGTUtbMkW5jFeFuK4KSwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADdiNtDmx+vjvdNs0A9iUReTKrpyP4sBpTpc7n2jl03ggAAAAAOgAAAAAIAACAAAABtL5CA1RAL9+RXQ+Z1pi7aFq5ewluYO5EdruYWU2KeXSAAAACASXJsU2osI63bZ0xm09/5Gj92BPJdGwVOMQWJVCEooUAAAACrk5Un/OxPMOzENw8MDok0nRFoGmK9v7C0GWEC7WXCGFPCC/qGoEqzqB+MFHzSrIs74XKr0wW8qGzlV/IKqDZO</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1196,7 +1196,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWnyGTUtbMkW5jFeFuK4KSwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD+jkvP3XMLte255q1/RcFKk+sSXrgR93isaZbjUO/jNgAAAAAOgAAAAAIAACAAAADfeW2P3QH1RQh+mJvAB3Tx4X0UPHyIEdJmi4EAsKuehyAAAACZJnuwF+zLgX9pSaGwjrEK8aWSfnarE5huS4yHNX41u0AAAACqqyYmmKtS84sQiXo11OXs9e1dttO1QdbS2OWAnwBq35MT8VnemIpwNh/DY9wPae3V2AaoLvt72ok3eRM5oX1n</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWnyGTUtbMkW5jFeFuK4KSwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADffEc3jjo+f+V4RG8byIcYpqzCYVNr5j1+gMMm97A0cwAAAAAOgAAAAAIAACAAAACtfRqj7ndKBy56L5zzvXWc8+US4qcJ93f8BcS4+CvyLCAAAAC07l0Kam511yleqFhCfovfJvRAIGklhMtxel3wpGpORUAAAADAcDUsQuFE/VL8Sur59E5Nk8Sk+8AkdstbGtGdXPuRNSNEcX+M3eKcbBaUTrIXIk3JgjmwIbBIFJYVqPQQf0HE</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1211,7 +1211,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWnyGTUtbMkW5jFeFuK4KSwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABfUlEMUwOzU/VdWvK/As9rW6IVDDOSZVV9WPIjcrW2DgAAAAAOgAAAAAIAACAAAADya2EbXQ6+QKSzAwc/Akk4BrHB82skNhDJEY85+xhkeSAAAAAMmn9tYCPL4uR8/g82B68rMaLcXKnZPVefhuCSwdHhj0AAAADoKcV7kHze3lI3g0lln7jmvghTqgOJadTkqxL9waVMHM7gDnUg6XqyHZ54PebDCEiiCptgeiKejFF0r/CjOM2U</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWnyGTUtbMkW5jFeFuK4KSwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACCAw7WsHe/tF1GNcEBc28K6whEoNVBeIMbEHzC9vke1AAAAAAOgAAAAAIAACAAAADQxoBhg4oGFWPD7zU2rNqv79e7A991CZndC4iYQzplwiAAAAAUf+/tEiB6UTtZy4oT4syLLGYha36/KLPwxt/te3pLc0AAAADStkA5uFd94uV5f7HcpwXqrCF8js738NhK4RDF5vOf+0QC6YEkHJcx2k/LYbD0M0kpBC+q0r7Bnax8Wr5+fzGA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -8758,49 +8758,49 @@
               startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Derived Column Output8]"
-              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 2]"
+              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 5]"
               name="Derived Column Output"
-              startId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output]" />
+              startId="Package\Data Flow Task\Derived Column 4.Outputs[Derived Column Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Derived Column Output7]"
-              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 1]"
-              name="Derived Column Output"
-              startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Derived Column Output6]"
-              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 3]"
-              name="Derived Column Output"
-              startId="Package\Data Flow Task\Derived Column 2.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Derived Column Output4]"
-              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 4]"
-              name="Derived Column Output"
-              startId="Package\Data Flow Task\Derived Column 3.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Derived Column Output5]"
-              endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
-              name="Derived Column Output"
-              startId="Package\Data Flow Task\Derived Column 8.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Derived Column Output2]"
-              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 6]"
-              name="Derived Column Output"
-              startId="Package\Data Flow Task\Derived Column 5.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Derived Column Output1]"
-              endId="Package\Data Flow Task\Derived Column 7.Inputs[Derived Column Input]"
-              name="Derived Column Output"
-              startId="Package\Data Flow Task\Derived Column 6.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Derived Column Output]"
               endId="Package\Data Flow Task\Derived Column 8.Inputs[Derived Column Input]"
               name="Derived Column Output"
               startId="Package\Data Flow Task\Derived Column 7.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Derived Column Output3]"
-              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 5]"
+              refId="Package\Data Flow Task.Paths[Derived Column Output6]"
+              endId="Package\Data Flow Task\Derived Column 7.Inputs[Derived Column Input]"
               name="Derived Column Output"
-              startId="Package\Data Flow Task\Derived Column 4.Outputs[Derived Column Output]" />
+              startId="Package\Data Flow Task\Derived Column 6.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output4]"
+              endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Derived Column 8.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output5]"
+              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 6]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Derived Column 5.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output2]"
+              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 3]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Derived Column 2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output1]"
+              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output]"
+              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output3]"
+              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 4]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Derived Column 3.Outputs[Derived Column Output]" />
             <path
               refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
               endId="Package\Data Flow Task\Sort.Inputs[Sort Input]"
@@ -23058,24 +23058,24 @@
               startId="Package\Param\Conditional Split 2 1.Outputs[nazwa_z_]" />
             <path
               refId="Package\Param.Paths[OLE DB Source Output3]"
-              endId="Package\Param\Sort 2.Inputs[Sort Input]"
+              endId="Package\Param\Sort 3.Inputs[Sort Input]"
               name="OLE DB Source Output"
-              startId="Package\Param\OLE DB Source 2.Outputs[OLE DB Source Output]" />
+              startId="Package\Param\OLE DB Source 3.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Param.Paths[OLE DB Source Output2]"
-              endId="Package\Param\Conditional Split 2.Inputs[Conditional Split Input]"
-              name="OLE DB Source Output"
-              startId="Package\Param\OLE DB Source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Param.Paths[OLE DB Source Output1]"
               endId="Package\Param\Sort 1.Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\Param\OLE DB Source 1.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Param.Paths[OLE DB Source Output]"
-              endId="Package\Param\Sort 3.Inputs[Sort Input]"
+              refId="Package\Param.Paths[OLE DB Source Output1]"
+              endId="Package\Param\Conditional Split 2.Inputs[Conditional Split Input]"
               name="OLE DB Source Output"
-              startId="Package\Param\OLE DB Source 3.Outputs[OLE DB Source Output]" />
+              startId="Package\Param\OLE DB Source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Param.Paths[OLE DB Source Output]"
+              endId="Package\Param\Sort 2.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Param\OLE DB Source 2.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Param.Paths[Sort Output]"
               endId="Package\Param\Merge Join.Inputs[Merge Join Right Input]"
@@ -23540,6 +23540,10 @@
           Id="Package\Execute SQL Task 4"
           TopLeft="23.9999990463258,201.066668264601" />
         <NodeLayout
+          Size="173.6,41.6"
+          Id="Package\Execute SQL Task 5"
+          TopLeft="507.999979813894,340.426669372135" />
+        <NodeLayout
           Size="136.8,41.6"
           Id="Package\Media group"
           TopLeft="169,30" />
@@ -23765,10 +23769,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="173.6,41.6"
-          Id="Package\Execute SQL Task 5"
-          TopLeft="507.999979813894,340.426669372135" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 7]"
           TopLeft="596.666646175915,302.293335405138">
@@ -25307,7 +25307,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output8]"
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
           TopLeft="307.2,412">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25341,7 +25341,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output7]"
+          Id="Package\Data Flow Task.Paths[Derived Column Output1]"
           TopLeft="155.2,410.4">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25375,7 +25375,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output6]"
+          Id="Package\Data Flow Task.Paths[Derived Column Output2]"
           TopLeft="433.6,414.4">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25409,7 +25409,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output5]"
+          Id="Package\Data Flow Task.Paths[Derived Column Output4]"
           TopLeft="436.2,700">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25431,7 +25431,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output4]"
+          Id="Package\Data Flow Task.Paths[Derived Column Output3]"
           TopLeft="586.4,415.2">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25465,7 +25465,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output3]"
+          Id="Package\Data Flow Task.Paths[Derived Column Output8]"
           TopLeft="728,414.4">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25499,7 +25499,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output2]"
+          Id="Package\Data Flow Task.Paths[Derived Column Output5]"
           TopLeft="865.6,416">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25533,7 +25533,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output1]"
+          Id="Package\Data Flow Task.Paths[Derived Column Output6]"
           TopLeft="356,568">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25567,7 +25567,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          Id="Package\Data Flow Task.Paths[Derived Column Output7]"
           TopLeft="528,624">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27314,7 +27314,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Param.Paths[OLE DB Source Output3]"
+          Id="Package\Param.Paths[OLE DB Source Output]"
           TopLeft="588.4,53.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27348,7 +27348,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Param.Paths[OLE DB Source Output2]"
+          Id="Package\Param.Paths[OLE DB Source Output1]"
           TopLeft="135.20000333786,46.7733330247667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27382,7 +27382,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Param.Paths[OLE DB Source Output1]"
+          Id="Package\Param.Paths[OLE DB Source Output2]"
           TopLeft="411.2,51.2">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27404,7 +27404,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Param.Paths[OLE DB Source Output]"
+          Id="Package\Param.Paths[OLE DB Source Output3]"
           TopLeft="765.2,54.4">
           <EdgeLayout.Curve>
             <mssgle:Curve
