@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="72"
-  DTS:VersionGUID="{A65F03E4-C2C9-4F7C-9F9C-C62D42D1A7F8}">
+  DTS:VersionBuild="73"
+  DTS:VersionGUID="{81371F49-D657-4930-BCA1-7078A8FF4F90}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -222,7 +222,22 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWnyGTUtbMkW5jFeFuK4KSwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADhgOdXuUksJ9/rdBPXGwEnAv77xN/UYnmd0D0khokONwAAAAAOgAAAAAIAACAAAAApz8LiFg/4EUb6UC4DOIVykGxZOekCe1dB2fH823NHryAAAACfk13Dizli9G83wARnoRaZo8JgybJXjUUsDuit0Gt/d0AAAACtEtbKQ6zufUgYekgX0/cyqwg3XAGBZNHaLqkBYPGPf9LhkG6U9UvX6+bC4zRrLSOAAJETU203dKQuSTbsPzz1</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWnyGTUtbMkW5jFeFuK4KSwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADEF4i2j6QbvB/mwJN9xtk++ia7ON66mwY0y8GTsdIa2wAAAAAOgAAAAAIAACAAAABhfmJYFQ2nUZRZpX2rKvg1Nrhgo7ADJVNqgcGGgBDZdyAAAADFGS8wCOHNUjRI3aXsx80TVA4szTnUwld0N9I+LpwnDkAAAAA/OIkw4oyJGyuNaVmjnFf+HWTx4g6cw8hlTpmidetLLPMz2g/DdqxTdSjgYPPVkH7d70DpyTJx9Iu7QM6iwfjo</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage_2018-05-10T08-35Z.hd-admin]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A60D3444-1B7F-4DCE-9500-AE5EB37B6E9E}"
+      DTS:ObjectName="hd-stage-server.database.windows.net.hd-stage_2018-05-10T08-35Z.hd-admin">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=hd-stage-server.database.windows.net;User ID=hd-admin;Initial Catalog=hd-stage_2018-05-10T08-35Z;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWnyGTUtbMkW5jFeFuK4KSwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADGPUrk23Gk0ysUnlY8KFbTGUtA0XLifp06LE5dnM/WLgAAAAAOgAAAAAIAACAAAAB2EkraJY/0lZCenQAR3bh34lCjDc8wIrGOIoshZZcLxCAAAADhoBEOzAoFnlYLj9giv76HBy3rlLVN8RpL7vF6xG75G0AAAACafwi7QoAehDfOz3cSH1PhVF+7pXkbUSdQdkWJZQt5Rt8RNwgo0zgfOnPDjglmAdKEPSrT8XbGZ8xEQ/WMZ3A3</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -245,11 +260,468 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task\Excel Source"
+              refId="Package\Data Flow Task\Event"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1045"
+              name="Event"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Event.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;Date&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;Date&quot;]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;Date&quot;]"
+                      name="&quot;Date&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;Channel&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;Channel&quot;]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;Channel&quot;]"
+                      name="&quot;Channel&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;Description&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;Description&quot;]"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;Description&quot;]"
+                      name="&quot;Description&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;2nd Description&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;2nd Description&quot;]"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;2nd Description&quot;]"
+                      name="&quot;2nd Description&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;Start time&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;Start time&quot;]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;Start time&quot;]"
+                      name="&quot;Start time&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;Duration&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;Duration&quot;]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;Duration&quot;]"
+                      name="&quot;Duration&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;Variable Target&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;Variable Target&quot;]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;Variable Target&quot;]"
+                      name="&quot;Variable Target&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;Total Individuals&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;Total Individuals&quot;]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;Total Individuals&quot;]"
+                      name="&quot;Total Individuals&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;Podgrupa&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;Podgrupa&quot;]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;Podgrupa&quot;]"
+                      name="&quot;Podgrupa&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;A16-49&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;A16-49&quot;]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;A16-49&quot;]"
+                      name="&quot;A16-49&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;M16-49&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;M16-49&quot;]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;M16-49&quot;]"
+                      name="&quot;M16-49&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;A4-15&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;A4-15&quot;]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;A4-15&quot;]"
+                      name="&quot;A4-15&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;A4-9&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;A4-9&quot;]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;A4-9&quot;]"
+                      name="&quot;A4-9&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[Column 13]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[Column 13]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[Column 13]"
+                      name="Column 13"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;Date&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;Date&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;Channel&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;Channel&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;Description&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      name="&quot;Description&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;2nd Description&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      name="&quot;2nd Description&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;Start time&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;Start time&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;Duration&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;Duration&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;Variable Target&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;Variable Target&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;Total Individuals&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;Total Individuals&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;Podgrupa&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;Podgrupa&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;A16-49&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;A16-49&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;M16-49&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;M16-49&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;A4-15&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;A4-15&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;A4-9&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;A4-9&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[Column 13]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Column 13" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Event.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1250"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Event.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Grupy mediowe"
               componentClassID="Microsoft.ExcelSource"
               contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Excel Source"
-              name="Excel Source"
+              name="Grupy mediowe"
               usesDispositions="true"
               version="1">
               <properties>
@@ -286,7 +758,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Excel Source.Connections[OleDbConnection]"
+                  refId="Package\Data Flow Task\Grupy mediowe.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
                   connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
                   description="The OLE DB runtime connection used to access the database."
@@ -294,68 +766,68 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output]"
+                  refId="Package\Data Flow Task\Grupy mediowe.Outputs[Excel Source Output]"
                   name="Excel Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[F1]"
+                      refId="Package\Data Flow Task\Grupy mediowe.Outputs[Excel Source Output].Columns[F1]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[F1]"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[F1]"
+                      externalMetadataColumnId="Package\Data Flow Task\Grupy mediowe.Outputs[Excel Source Output].ExternalColumns[F1]"
+                      lineageId="Package\Data Flow Task\Grupy mediowe.Outputs[Excel Source Output].Columns[F1]"
                       name="F1"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[F2]"
+                      refId="Package\Data Flow Task\Grupy mediowe.Outputs[Excel Source Output].Columns[F2]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[F2]"
+                      externalMetadataColumnId="Package\Data Flow Task\Grupy mediowe.Outputs[Excel Source Output].ExternalColumns[F2]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[F2]"
+                      lineageId="Package\Data Flow Task\Grupy mediowe.Outputs[Excel Source Output].Columns[F2]"
                       name="F2"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[F1]"
+                      refId="Package\Data Flow Task\Grupy mediowe.Outputs[Excel Source Output].ExternalColumns[F1]"
                       dataType="r8"
                       name="F1" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[F2]"
+                      refId="Package\Data Flow Task\Grupy mediowe.Outputs[Excel Source Output].ExternalColumns[F2]"
                       dataType="wstr"
                       length="255"
                       name="F2" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output]"
+                  refId="Package\Data Flow Task\Grupy mediowe.Outputs[Excel Source Error Output]"
                   isErrorOut="true"
                   name="Excel Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[F1]"
+                      refId="Package\Data Flow Task\Grupy mediowe.Outputs[Excel Source Error Output].Columns[F1]"
                       dataType="r8"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[F1]"
+                      lineageId="Package\Data Flow Task\Grupy mediowe.Outputs[Excel Source Error Output].Columns[F1]"
                       name="F1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[F2]"
+                      refId="Package\Data Flow Task\Grupy mediowe.Outputs[Excel Source Error Output].Columns[F2]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[F2]"
+                      lineageId="Package\Data Flow Task\Grupy mediowe.Outputs[Excel Source Error Output].Columns[F2]"
                       name="F2" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task\Grupy mediowe.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\Grupy mediowe.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task\Grupy mediowe.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\Grupy mediowe.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -364,11 +836,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Excel Source 1"
+              refId="Package\Data Flow Task\Kategorie"
               componentClassID="Microsoft.ExcelSource"
               contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Excel Source"
-              name="Excel Source 1"
+              name="Kategorie"
               usesDispositions="true"
               version="1">
               <properties>
@@ -405,7 +877,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Excel Source 1.Connections[OleDbConnection]"
+                  refId="Package\Data Flow Task\Kategorie.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
                   connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
                   description="The OLE DB runtime connection used to access the database."
@@ -413,649 +885,71 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Excel Source 1.Outputs[Excel Source Output]"
+                  refId="Package\Data Flow Task\Kategorie.Outputs[Excel Source Output]"
                   name="Excel Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source 1.Outputs[Excel Source Output].Columns[F1]"
+                      refId="Package\Data Flow Task\Kategorie.Outputs[Excel Source Output].Columns[F1]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[F1]"
+                      externalMetadataColumnId="Package\Data Flow Task\Kategorie.Outputs[Excel Source Output].ExternalColumns[F1]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Source 1.Outputs[Excel Source Output].Columns[F1]"
+                      lineageId="Package\Data Flow Task\Kategorie.Outputs[Excel Source Output].Columns[F1]"
                       name="F1"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source 1.Outputs[Excel Source Output].Columns[F2]"
+                      refId="Package\Data Flow Task\Kategorie.Outputs[Excel Source Output].Columns[F2]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[F2]"
+                      externalMetadataColumnId="Package\Data Flow Task\Kategorie.Outputs[Excel Source Output].ExternalColumns[F2]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Source 1.Outputs[Excel Source Output].Columns[F2]"
+                      lineageId="Package\Data Flow Task\Kategorie.Outputs[Excel Source Output].Columns[F2]"
                       name="F2"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[F1]"
+                      refId="Package\Data Flow Task\Kategorie.Outputs[Excel Source Output].ExternalColumns[F1]"
                       dataType="wstr"
                       length="255"
                       name="F1" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[F2]"
+                      refId="Package\Data Flow Task\Kategorie.Outputs[Excel Source Output].ExternalColumns[F2]"
                       dataType="wstr"
                       length="255"
                       name="F2" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Excel Source 1.Outputs[Excel Source Error Output]"
+                  refId="Package\Data Flow Task\Kategorie.Outputs[Excel Source Error Output]"
                   isErrorOut="true"
                   name="Excel Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source 1.Outputs[Excel Source Error Output].Columns[F1]"
+                      refId="Package\Data Flow Task\Kategorie.Outputs[Excel Source Error Output].Columns[F1]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Source 1.Outputs[Excel Source Error Output].Columns[F1]"
+                      lineageId="Package\Data Flow Task\Kategorie.Outputs[Excel Source Error Output].Columns[F1]"
                       name="F1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source 1.Outputs[Excel Source Error Output].Columns[F2]"
+                      refId="Package\Data Flow Task\Kategorie.Outputs[Excel Source Error Output].Columns[F2]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Source 1.Outputs[Excel Source Error Output].Columns[F2]"
+                      lineageId="Package\Data Flow Task\Kategorie.Outputs[Excel Source Error Output].Columns[F2]"
                       name="F2" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source 1.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task\Kategorie.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Excel Source 1.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\Kategorie.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source 1.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task\Kategorie.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Excel Source 1.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Flat File Source"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Source"
-              localeId="1045"
-              name="Flat File Source"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
-                  name="FileNameColumnName"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
-                  name="FlatFileConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]"
-                  name="Flat File Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Date&quot;]"
-                      codePage="1250"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Date&quot;]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Date&quot;]"
-                      name="&quot;Date&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Channel&quot;]"
-                      codePage="1250"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Channel&quot;]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Channel&quot;]"
-                      name="&quot;Channel&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Description&quot;]"
-                      codePage="1250"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Description&quot;]"
-                      length="100"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Description&quot;]"
-                      name="&quot;Description&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;2nd Description&quot;]"
-                      codePage="1250"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;2nd Description&quot;]"
-                      length="100"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;2nd Description&quot;]"
-                      name="&quot;2nd Description&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Start time&quot;]"
-                      codePage="1250"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Start time&quot;]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Start time&quot;]"
-                      name="&quot;Start time&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Duration&quot;]"
-                      codePage="1250"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Duration&quot;]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Duration&quot;]"
-                      name="&quot;Duration&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Variable Target&quot;]"
-                      codePage="1250"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Variable Target&quot;]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Variable Target&quot;]"
-                      name="&quot;Variable Target&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Total Individuals&quot;]"
-                      codePage="1250"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Total Individuals&quot;]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Total Individuals&quot;]"
-                      name="&quot;Total Individuals&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Podgrupa&quot;]"
-                      codePage="1250"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Podgrupa&quot;]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Podgrupa&quot;]"
-                      name="&quot;Podgrupa&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;A16-49&quot;]"
-                      codePage="1250"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;A16-49&quot;]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;A16-49&quot;]"
-                      name="&quot;A16-49&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;M16-49&quot;]"
-                      codePage="1250"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;M16-49&quot;]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;M16-49&quot;]"
-                      name="&quot;M16-49&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;A4-15&quot;]"
-                      codePage="1250"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;A4-15&quot;]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;A4-15&quot;]"
-                      name="&quot;A4-15&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;A4-9&quot;]"
-                      codePage="1250"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;A4-9&quot;]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;A4-9&quot;]"
-                      name="&quot;A4-9&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Column 13]"
-                      codePage="1250"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 13]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Column 13]"
-                      name="Column 13"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Date&quot;]"
-                      codePage="1250"
-                      dataType="str"
-                      length="50"
-                      name="&quot;Date&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Channel&quot;]"
-                      codePage="1250"
-                      dataType="str"
-                      length="50"
-                      name="&quot;Channel&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Description&quot;]"
-                      codePage="1250"
-                      dataType="str"
-                      length="100"
-                      name="&quot;Description&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;2nd Description&quot;]"
-                      codePage="1250"
-                      dataType="str"
-                      length="100"
-                      name="&quot;2nd Description&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Start time&quot;]"
-                      codePage="1250"
-                      dataType="str"
-                      length="50"
-                      name="&quot;Start time&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Duration&quot;]"
-                      codePage="1250"
-                      dataType="str"
-                      length="50"
-                      name="&quot;Duration&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Variable Target&quot;]"
-                      codePage="1250"
-                      dataType="str"
-                      length="50"
-                      name="&quot;Variable Target&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Total Individuals&quot;]"
-                      codePage="1250"
-                      dataType="str"
-                      length="50"
-                      name="&quot;Total Individuals&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Podgrupa&quot;]"
-                      codePage="1250"
-                      dataType="str"
-                      length="50"
-                      name="&quot;Podgrupa&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;A16-49&quot;]"
-                      codePage="1250"
-                      dataType="str"
-                      length="50"
-                      name="&quot;A16-49&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;M16-49&quot;]"
-                      codePage="1250"
-                      dataType="str"
-                      length="50"
-                      name="&quot;M16-49&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;A4-15&quot;]"
-                      codePage="1250"
-                      dataType="str"
-                      length="50"
-                      name="&quot;A4-15&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;A4-9&quot;]"
-                      codePage="1250"
-                      dataType="str"
-                      length="50"
-                      name="&quot;A4-9&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 13]"
-                      codePage="1250"
-                      dataType="str"
-                      length="50"
-                      name="Column 13" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output]"
-                  isErrorOut="true"
-                  name="Flat File Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      codePage="1250"
-                      dataType="text"
-                      description="Flat File Source Error Output Column"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      name="Flat File Source Error Output Column" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Flat File Source 1"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Source"
-              localeId="1045"
-              name="Flat File Source 1"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
-                  name="FileNameColumnName"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\Flat File Source 1.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
-                  name="FlatFileConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output]"
-                  name="Flat File Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].Columns[Nazwa]"
-                      codePage="1250"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Nazwa]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].Columns[Nazwa]"
-                      name="Nazwa"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].Columns[Kod]"
-                      codePage="1250"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Kod]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].Columns[Kod]"
-                      name="Kod"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Nazwa]"
-                      codePage="1250"
-                      dataType="str"
-                      length="50"
-                      name="Nazwa" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Kod]"
-                      codePage="1250"
-                      dataType="str"
-                      length="50"
-                      name="Kod" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Error Output]"
-                  isErrorOut="true"
-                  name="Flat File Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      codePage="1250"
-                      dataType="text"
-                      description="Flat File Source Error Output Column"
-                      lineageId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      name="Flat File Source Error Output Column" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\Kategorie.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1079,7 +973,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Event]</property>
+                  name="OpenRowset">[dbo].[Event]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1122,8 +1016,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage.hd-admin]"
-                  connectionManagerRefId="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage.hd-admin]"
+                  connectionManagerID="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage_2018-05-10T08-35Z.hd-admin]"
+                  connectionManagerRefId="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage_2018-05-10T08-35Z.hd-admin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1134,6 +1028,112 @@
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Date&quot;]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;Date&quot;"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[s_date]"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;Date&quot;]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Channel&quot;]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;Channel&quot;"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Channel]"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;Channel&quot;]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Description&quot;]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="&quot;Description&quot;"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;Description&quot;]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;2nd Description&quot;]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="&quot;2nd Description&quot;"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[2nd Description]"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;2nd Description&quot;]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Start time&quot;]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;Start time&quot;"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Start time]"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;Start time&quot;]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Duration&quot;]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;Duration&quot;"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Duration]"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;Duration&quot;]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Variable Target&quot;]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;Variable Target&quot;"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Variable Target]"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;Variable Target&quot;]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Total Individuals&quot;]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;Total Individuals&quot;"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Total Individuals]"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;Total Individuals&quot;]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Podgrupa&quot;]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;Podgrupa&quot;"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Podgrupa]"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;Podgrupa&quot;]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;A16-49&quot;]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;A16-49&quot;"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[A16-49]"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;A16-49&quot;]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;M16-49&quot;]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;M16-49&quot;"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[M16-49]"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;M16-49&quot;]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;A4-15&quot;]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;A4-15&quot;"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[A4-15]"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;A4-15&quot;]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;A4-9&quot;]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;A4-9&quot;"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[A4-9]"
+                      lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;A4-9&quot;]" />
+                  </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
@@ -1262,7 +1262,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Target.group]</property>
+                  name="OpenRowset">[dbo].[Target.group]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1305,8 +1305,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination 1.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage.hd-admin]"
-                  connectionManagerRefId="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage.hd-admin]"
+                  connectionManagerID="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage_2018-05-10T08-35Z.hd-admin]"
+                  connectionManagerRefId="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage_2018-05-10T08-35Z.hd-admin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1325,7 +1325,7 @@
                       cachedLength="50"
                       cachedName="Nazwa"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Nazwa]"
-                      lineageId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].Columns[Nazwa]" />
+                      lineageId="Package\Data Flow Task\Target group.Outputs[Flat File Source Output].Columns[Nazwa]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Kod]"
                       cachedCodepage="1250"
@@ -1333,7 +1333,7 @@
                       cachedLength="50"
                       cachedName="Kod"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Kod]"
-                      lineageId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].Columns[Kod]" />
+                      lineageId="Package\Data Flow Task\Target group.Outputs[Flat File Source Output].Columns[Kod]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1393,7 +1393,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Media.group]</property>
+                  name="OpenRowset">[dbo].[Media.group]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1436,8 +1436,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination 2.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage.hd-admin]"
-                  connectionManagerRefId="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage.hd-admin]"
+                  connectionManagerID="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage_2018-05-10T08-35Z.hd-admin]"
+                  connectionManagerRefId="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage_2018-05-10T08-35Z.hd-admin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1454,14 +1454,14 @@
                       cachedDataType="r8"
                       cachedName="F1"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination 2.Inputs[OLE DB Destination Input].ExternalColumns[Nr]"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[F1]" />
+                      lineageId="Package\Data Flow Task\Grupy mediowe.Outputs[Excel Source Output].Columns[F1]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination 2.Inputs[OLE DB Destination Input].Columns[F2]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="F2"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination 2.Inputs[OLE DB Destination Input].ExternalColumns[Nazwa]"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[F2]" />
+                      lineageId="Package\Data Flow Task\Grupy mediowe.Outputs[Excel Source Output].Columns[F2]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1474,6 +1474,12 @@
                       dataType="wstr"
                       length="255"
                       name="Nazwa" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 2.Inputs[OLE DB Destination Input].ExternalColumns[ngr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ngr" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1518,7 +1524,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Kanal]</property>
+                  name="OpenRowset">[dbo].[Kanal]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1561,8 +1567,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination 3.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage.hd-admin]"
-                  connectionManagerRefId="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage.hd-admin]"
+                  connectionManagerID="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage_2018-05-10T08-35Z.hd-admin]"
+                  connectionManagerRefId="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage_2018-05-10T08-35Z.hd-admin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1580,14 +1586,14 @@
                       cachedLength="255"
                       cachedName="F1"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination 3.Inputs[OLE DB Destination Input].ExternalColumns[Kanal]"
-                      lineageId="Package\Data Flow Task\Excel Source 1.Outputs[Excel Source Output].Columns[F1]" />
+                      lineageId="Package\Data Flow Task\Kategorie.Outputs[Excel Source Output].Columns[F1]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination 3.Inputs[OLE DB Destination Input].Columns[F2]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="F2"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination 3.Inputs[OLE DB Destination Input].ExternalColumns[Kategoria]"
-                      lineageId="Package\Data Flow Task\Excel Source 1.Outputs[Excel Source Output].Columns[F2]" />
+                      lineageId="Package\Data Flow Task\Kategorie.Outputs[Excel Source Output].Columns[F2]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1629,302 +1635,149 @@
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\Data Flow Task\Target group"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1045"
+              name="Target group"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Target group.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Target group.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Target group.Outputs[Flat File Source Output].Columns[Nazwa]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Target group.Outputs[Flat File Source Output].ExternalColumns[Nazwa]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Target group.Outputs[Flat File Source Output].Columns[Nazwa]"
+                      name="Nazwa"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Target group.Outputs[Flat File Source Output].Columns[Kod]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Target group.Outputs[Flat File Source Output].ExternalColumns[Kod]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Target group.Outputs[Flat File Source Output].Columns[Kod]"
+                      name="Kod"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Target group.Outputs[Flat File Source Output].ExternalColumns[Nazwa]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Nazwa" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Target group.Outputs[Flat File Source Output].ExternalColumns[Kod]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Kod" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Target group.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Target group.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1250"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task\Target group.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Target group.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Target group.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Target group.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Target group.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
               refId="Package\Data Flow Task.Paths[Excel Source Output]"
               endId="Package\Data Flow Task\OLE DB Destination 2.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output]" />
+              startId="Package\Data Flow Task\Grupy mediowe.Outputs[Excel Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Excel Source Output1]"
               endId="Package\Data Flow Task\OLE DB Destination 3.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Data Flow Task\Excel Source 1.Outputs[Excel Source Output]" />
+              startId="Package\Data Flow Task\Kategorie.Outputs[Excel Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Flat File Source Output]"
               endId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
               name="Flat File Source Output"
-              startId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output]" />
+              startId="Package\Data Flow Task\Target group.Outputs[Flat File Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Flat File Source Output1]"
               endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Flat File Source Output"
-              startId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
-          </paths>
-        </pipeline>
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Data Flow Task 1"
-      DTS:CreationName="Microsoft.Pipeline"
-      DTS:Description="Data Flow Task"
-      DTS:DTSID="{78F0A953-558F-49EB-87C8-2DB66A269CED}"
-      DTS:ExecutableType="Microsoft.Pipeline"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task 1"
-      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <pipeline
-          version="1">
-          <components>
-            <component
-              refId="Package\Data Flow Task 1\Excel Source 1"
-              componentClassID="Microsoft.ExcelSource"
-              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Excel Source"
-              name="Excel Source 1"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">'kategorie $'</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.String"
-                  description="The mapping from parameters in the SQL command to variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task 1\Excel Source 1.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task 1\Excel Source 1.Outputs[Excel Source Output]"
-                  name="Excel Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Excel Source 1.Outputs[Excel Source Output].Columns[F1]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[F1]"
-                      length="255"
-                      lineageId="Package\Data Flow Task 1\Excel Source 1.Outputs[Excel Source Output].Columns[F1]"
-                      name="F1"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Excel Source 1.Outputs[Excel Source Output].Columns[F2]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[F2]"
-                      length="255"
-                      lineageId="Package\Data Flow Task 1\Excel Source 1.Outputs[Excel Source Output].Columns[F2]"
-                      name="F2"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[F1]"
-                      dataType="wstr"
-                      length="255"
-                      name="F1" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[F2]"
-                      dataType="wstr"
-                      length="255"
-                      name="F2" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Data Flow Task 1\Excel Source 1.Outputs[Excel Source Error Output]"
-                  isErrorOut="true"
-                  name="Excel Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Excel Source 1.Outputs[Excel Source Error Output].Columns[F1]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Data Flow Task 1\Excel Source 1.Outputs[Excel Source Error Output].Columns[F1]"
-                      name="F1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Excel Source 1.Outputs[Excel Source Error Output].Columns[F2]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Data Flow Task 1\Excel Source 1.Outputs[Excel Source Error Output].Columns[F2]"
-                      name="F2" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Excel Source 1.Outputs[Excel Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Excel Source 1.Outputs[Excel Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Excel Source 1.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Excel Source 1.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task 1\OLE DB Destination 3"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="OLE DB Destination 3"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Kanal]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task 1\OLE DB Destination 3.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage.hd-admin]"
-                  connectionManagerRefId="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage.hd-admin]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task 1\OLE DB Destination 3.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\OLE DB Destination 3.Inputs[OLE DB Destination Input].Columns[F1]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="F1"
-                      externalMetadataColumnId="Package\Data Flow Task 1\OLE DB Destination 3.Inputs[OLE DB Destination Input].ExternalColumns[Kanal]"
-                      lineageId="Package\Data Flow Task 1\Excel Source 1.Outputs[Excel Source Output].Columns[F1]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\OLE DB Destination 3.Inputs[OLE DB Destination Input].Columns[F2]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="F2"
-                      externalMetadataColumnId="Package\Data Flow Task 1\OLE DB Destination 3.Inputs[OLE DB Destination Input].ExternalColumns[Kategoria]"
-                      lineageId="Package\Data Flow Task 1\Excel Source 1.Outputs[Excel Source Output].Columns[F2]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\OLE DB Destination 3.Inputs[OLE DB Destination Input].ExternalColumns[Kanal]"
-                      dataType="wstr"
-                      length="255"
-                      name="Kanal" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\OLE DB Destination 3.Inputs[OLE DB Destination Input].ExternalColumns[Kategoria]"
-                      dataType="wstr"
-                      length="255"
-                      name="Kategoria" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task 1\OLE DB Destination 3.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task 1\OLE DB Destination 3.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\OLE DB Destination 3.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task 1\OLE DB Destination 3.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\OLE DB Destination 3.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task 1\OLE DB Destination 3.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-          </components>
-          <paths>
-            <path
-              refId="Package\Data Flow Task 1.Paths[Excel Source Output]"
-              endId="Package\Data Flow Task 1\OLE DB Destination 3.Inputs[OLE DB Destination Input]"
-              name="Excel Source Output"
-              startId="Package\Data Flow Task 1\Excel Source 1.Outputs[Excel Source Output]" />
+              startId="Package\Data Flow Task\Event.Outputs[Flat File Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1946,10 +1799,6 @@
           Size="152,41.6"
           Id="Package\Data Flow Task"
           TopLeft="104.00000177111,70.352942163144" />
-        <NodeLayout
-          Size="159.2,41.6"
-          Id="Package\Data Flow Task 1"
-          TopLeft="89.3333297835457,155.306667900933" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -1967,65 +1816,55 @@
           Id="Package\Data Flow Task\OLE DB Destination 2"
           TopLeft="437.457150279746,144.376472613061" />
         <NodeLayout
-          Size="152,41.6"
-          Id="Package\Data Flow Task\Flat File Source"
-          TopLeft="31.2571416455868,15.4470584567443" />
-        <NodeLayout
           Size="180,41.6"
           Id="Package\Data Flow Task\OLE DB Destination 3"
           TopLeft="676.428582948081,182.000002552481" />
         <NodeLayout
-          Size="148.8,41.6"
-          Id="Package\Data Flow Task\Excel Source 1"
+          Size="104.8,41.6"
+          Id="Package\Data Flow Task\Event"
+          TopLeft="31.2571416455868,15.4470584567443" />
+        <NodeLayout
+          Size="123.2,41.6"
+          Id="Package\Data Flow Task\Kategorie"
           TopLeft="687.85715457128,61.1764714462122" />
         <NodeLayout
           Size="172,41.6"
           Id="Package\Data Flow Task\OLE DB Destination"
           TopLeft="20.8571413731088,133.128627081125" />
         <NodeLayout
-          Size="140,41.6"
-          Id="Package\Data Flow Task\Excel Source"
+          Size="151.2,41.6"
+          Id="Package\Data Flow Task\Grupy mediowe"
           TopLeft="461.904769808797,38.8572554384919" />
         <NodeLayout
-          Size="160.8,41.6"
-          Id="Package\Data Flow Task\Flat File Source 1"
+          Size="137.6,41.6"
+          Id="Package\Data Flow Task\Target group"
           TopLeft="225.885716334168,26.0352908251607" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output1]"
-          TopLeft="764.392868759681,103.176471446212">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,78.8235311062688"
-              Start="0,0"
-              End="0,71.3235311062688">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,71.3235311062688" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Data Flow Task.Paths[Excel Source Output]"
-          TopLeft="529.880960044272,80.4572554384919">
+          TopLeft="537.504769808797,80.4572554384919">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,63.9192171745691"
+              EndConnector="-9.6476195290511,63.9192171745691"
               Start="0,0"
-              End="0,56.4192171745691">
+              End="-9.6476195290511,56.4192171745691">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,56.4192171745691" />
+                    End="0,27.9596085872845" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.9596085872845"
+                    Point2="0,31.9596085872845"
+                    Point3="-4,31.9596085872845" />
+                  <mssgle:LineSegment
+                    End="-5.6476195290511,31.9596085872845" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5.6476195290511,31.9596085872845"
+                    Point2="-9.6476195290511,31.9596085872845"
+                    Point3="-9.6476195290511,35.9596085872845" />
+                  <mssgle:LineSegment
+                    End="-9.6476195290511,56.4192171745691" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2036,18 +1875,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output1]"
-          TopLeft="107.057141509348,57.0470584567443">
+          TopLeft="83.6571416455868,57.0470584567443">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,76.0815686243811"
+              EndConnector="23.199999727522,76.0815686243807"
               Start="0,0"
-              End="0,68.5815686243811">
+              End="23.199999727522,68.5815686243807">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,68.5815686243811" />
+                    End="0,34.0407843121903" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.0407843121903"
+                    Point2="0,38.0407843121903"
+                    Point3="4,38.0407843121903" />
+                  <mssgle:LineSegment
+                    End="19.199999727522,38.0407843121903" />
+                  <mssgle:CubicBezierSegment
+                    Point1="19.199999727522,38.0407843121903"
+                    Point2="23.199999727522,38.0407843121903"
+                    Point3="23.199999727522,42.0407843121903" />
+                  <mssgle:LineSegment
+                    End="23.199999727522,68.5815686243807" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2058,13 +1909,13 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="306.285716334168,67.6352908251607">
+          TopLeft="294.685716334168,67.6352908251607">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="10.1333332008786,62.6133333223134"
+              EndConnector="21.733333200879,62.6133333223133"
               Start="0,0"
-              End="10.1333332008786,55.1133333223134">
+              End="21.733333200879,55.1133333223133">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2075,13 +1926,47 @@
                     Point2="0,31.3066666611567"
                     Point3="4,31.3066666611567" />
                   <mssgle:LineSegment
-                    End="6.13333320087855,31.3066666611567" />
+                    End="17.733333200879,31.3066666611567" />
                   <mssgle:CubicBezierSegment
-                    Point1="6.13333320087855,31.3066666611567"
-                    Point2="10.1333332008786,31.3066666611567"
-                    Point3="10.1333332008786,35.3066666611567" />
+                    Point1="17.733333200879,31.3066666611567"
+                    Point2="21.733333200879,31.3066666611567"
+                    Point3="21.733333200879,35.3066666611567" />
                   <mssgle:LineSegment
-                    End="10.1333332008786,55.1133333223134" />
+                    End="21.733333200879,55.1133333223133" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output1]"
+          TopLeft="749.45715457128,102.776471446212">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="16.971428376801,79.2235311062688"
+              Start="0,0"
+              End="16.971428376801,71.7235311062688">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.6117655531344" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35.6117655531344"
+                    Point2="0,39.6117655531344"
+                    Point3="4,39.6117655531344" />
+                  <mssgle:LineSegment
+                    End="12.971428376801,39.6117655531344" />
+                  <mssgle:CubicBezierSegment
+                    Point1="12.971428376801,39.6117655531344"
+                    Point2="16.971428376801,39.6117655531344"
+                    Point3="16.971428376801,43.6117655531344" />
+                  <mssgle:LineSegment
+                    End="16.971428376801,71.7235311062688" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2133,7 +2018,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Excel Source 1">
+    design-time-name="Package\Data Flow Task\Kategorie">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2159,58 +2044,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Excel Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Data Flow Task 1">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="180,41.6"
-          Id="Package\Data Flow Task 1\OLE DB Destination 3"
-          TopLeft="60,180.823531106269" />
-        <NodeLayout
-          Size="148.8,41.6"
-          Id="Package\Data Flow Task 1\Excel Source 1"
-          TopLeft="71.428571623199,60" />
-        <EdgeLayout
-          Id="Package\Data Flow Task 1.Paths[Excel Source Output]"
-          TopLeft="147.9142858116,101.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,79.223531106269"
-              Start="0,0"
-              End="0,71.723531106269">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,71.723531106269" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task 1\OLE DB Destination 3">
+    design-time-name="Package\Data Flow Task\Grupy mediowe">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
