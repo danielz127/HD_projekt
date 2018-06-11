@@ -12,22 +12,25 @@
     </DataSources>
     <Dimensions>
       <Dimension>
-        <ID>Channel Category</ID>
+        <ID>Kanał</ID>
       </Dimension>
       <Dimension>
-        <ID>Media Group</ID>
+        <ID>Kategoria kanału</ID>
       </Dimension>
       <Dimension>
-        <ID>Target Group</ID>
+        <ID>Data</ID>
       </Dimension>
       <Dimension>
-        <ID>Date</ID>
+        <ID>Grupa mediowa</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Grupa docelowa</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Czas</ID>
       </Dimension>
       <Dimension>
         <ID>Event</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Channel</ID>
       </Dimension>
     </Dimensions>
     <Cubes>

@@ -8,7 +8,7 @@
     <TransactionalDeployment>false</TransactionalDeployment>
     <PartitionDeployment>DeployPartitions</PartitionDeployment>
     <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
-    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <ProcessingOption>Default</ProcessingOption>
     <OutputScript></OutputScript>
     <ImpactAnalysisFile></ImpactAnalysisFile>
     <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
@@ -19,63 +19,70 @@
     <ObjectSnapshots>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
-        <TimeStamp>W9j2ew32OSUujLtgtiNSkMx525c=16.05.2018 17:26:0916.05.2018 17:26:09</TimeStamp>
+        <TimeStamp>+mYmoEy06M64YwN7k2+KX1JiIZE=31.05.2018 20:17:5931.05.2018 20:17:59</TimeStamp>
         <ID>
           <String>HD-baza</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>AUqFlWdYxEy7M5Mvkqmk1I/+jZM=15.05.2018 23:19:3515.05.2018 23:19:31</TimeStamp>
+        <TimeStamp>Qq27LoWOrc05xk1P/QGPHqgSJEg=04.06.2018 11:34:5603.06.2018 20:44:07</TimeStamp>
         <ID>
           <String>HD-baza</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>xpAwIPAkZZ9Sa3L7nCU1X6jFYu4=15.05.2018 23:23:0615.05.2018 23:23:06</TimeStamp>
+        <TimeStamp>IhZfcwSyvjVW4rNPXoZRC2mnd9Q=04.06.2018 11:34:5703.06.2018 20:47:48</TimeStamp>
         <ID>
-          <String>Channel Category</String>
+          <String>Kanał</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>il+1ueVjagQuAlOB8Rn67zXDtto=15.05.2018 23:23:3715.05.2018 23:23:37</TimeStamp>
+        <TimeStamp>JSnz5farOARdPbw3n3+rGc2qtXo=04.06.2018 11:34:5703.06.2018 20:52:37</TimeStamp>
         <ID>
-          <String>Media Group</String>
+          <String>Kategoria kanału</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>vo6L2nvrWwCzyW51G5WyXRw8lzs=15.05.2018 23:24:0215.05.2018 23:24:02</TimeStamp>
+        <TimeStamp>2xz5KEwRvVsdhOvG4UjvCiTY5BA=04.06.2018 11:35:4003.06.2018 20:56:42</TimeStamp>
         <ID>
-          <String>Target Group</String>
+          <String>Data</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>j9p9whJXx+ncm4PZX1jyw14HQfM=16.05.2018 22:26:3816.05.2018 22:23:01</TimeStamp>
+        <TimeStamp>QEm+zPLCMKP3fvH6O3nld8Ufibg=03.06.2018 21:06:5303.06.2018 21:05:22</TimeStamp>
         <ID>
-          <String>Date</String>
+          <String>Grupa mediowa</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>4bGwq9N2mN2F6SDWMvzEy9dYVPw=16.05.2018 22:26:3816.05.2018 22:26:37</TimeStamp>
+        <TimeStamp>xBtGoOGHTsU8+1WjlFgC7fqNQvE=03.06.2018 21:08:4303.06.2018 21:06:53</TimeStamp>
+        <ID>
+          <String>Grupa docelowa</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>JV9lSAjHmdOuXvRn+Fb0xurS5bo=03.06.2018 21:14:3103.06.2018 21:08:43</TimeStamp>
+        <ID>
+          <String>Czas</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>DpDs2YMMKM2elWARla4SpjcWXh0=04.06.2018 11:34:5603.06.2018 21:56:45</TimeStamp>
         <ID>
           <String>Event</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>bhVOhaWLEf2isMiyCEqCQlaKNPI=16.05.2018 22:28:0416.05.2018 22:27:23</TimeStamp>
-        <ID>
-          <String>Channel</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>xS5I2WGxxQKlBSTmn9o/rgmQdeE=16.05.2018 22:37:0116.05.2018 22:30:44412xBkzVMJWqwkzf1RENyW11s1U=16.05.2018 22:30:4416.05.2018 22:30:44</TimeStamp>
+        <TimeStamp>I3f939hOlmEMo09tXu586V6eZdY=04.06.2018 12:15:2803.06.2018 22:05:42ZYU0EyUJerQUbxLrjbxhWOMVboo=03.06.2018 22:05:4203.06.2018 22:05:42</TimeStamp>
         <ID>
           <String>HD-baza</String>
         </ID>
@@ -92,5 +99,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2018-05-16T20:37:47.076667Z</LastDeployed>
+  <LastDeployed>2018-06-04T10:15:57.16Z</LastDeployed>
 </DeploymentSnapshot>
