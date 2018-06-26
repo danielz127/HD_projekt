@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="78"
-  DTS:VersionGUID="{0FE79CE6-122E-45D4-B282-50A0326CA60D}">
+  DTS:VersionBuild="92"
+  DTS:VersionGUID="{0190ED3E-556D-41C7-8651-5BAFFE6572B0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,12 +29,11 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
       DTS:CreationName="EXCEL"
-      DTS:DelayValidation="True"
-      DTS:DTSID="{65540184-C487-4688-829C-20DBCEA716FB}"
+      DTS:DTSID="{84935EA3-AB5E-4EDB-980C-61C93322ABAB}"
       DTS:ObjectName="Excel Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Laptop\source\repos\HD_projekt\sources\HD_projekt_kategorie-kanałow.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=NO&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Daniel\source\repos\HD_projekt\sources\HD_projekt_kategorie-kanałow.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=NO&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -49,7 +48,7 @@
           DTS:HeaderRowDelimiter="_x000D__x000A_"
           DTS:ColumnNamesInFirstDataRow="True"
           DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
           DTS:ConnectionString="C:\Users\Daniel\Desktop\HD_projekt_event tydz 1 listopad 2015_inkrement\HD_projekt_event tydz 1 listopad 2015_inkrement.txt">
           <DTS:FlatFileColumns>
@@ -60,7 +59,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;Date&quot;"
-              DTS:DTSID="{6DC8AA8C-C80D-40C9-B58F-4E77975E23EA}"
+              DTS:DTSID="{CD2388B8-93E8-45DC-A608-AB6845E799D9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -69,7 +68,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;Channel&quot;"
-              DTS:DTSID="{78B58425-AC25-4E0A-90D5-147008620D48}"
+              DTS:DTSID="{3D0B616C-B7CC-4457-BF6F-04758AAA83C0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -78,7 +77,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;Description&quot;"
-              DTS:DTSID="{D5F85B1C-2AAA-4C97-9A4F-085606087FBC}"
+              DTS:DTSID="{230DCDC4-61A0-442B-ABCD-4F0D18C4279A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -87,7 +86,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;2nd Description&quot;"
-              DTS:DTSID="{1BB4ED90-442C-419B-BE9B-0AE1B7C33372}"
+              DTS:DTSID="{8C162006-E0C3-41C7-9847-69A6EC1D2ED3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -96,7 +95,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;Start time&quot;"
-              DTS:DTSID="{D44C06E5-8B3F-41A2-BA07-90EAADB7B4CE}"
+              DTS:DTSID="{F5391648-0768-42B4-BDC6-AD7166BED7CF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -105,7 +104,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;Duration&quot;"
-              DTS:DTSID="{2E1D0F5B-C2B6-47E9-95FE-71F1827AB9CF}"
+              DTS:DTSID="{06C17003-5A80-4D64-B173-46398E98C0E7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -114,7 +113,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;Variable Target&quot;"
-              DTS:DTSID="{71F19417-DF87-4041-9BCF-5DD8A6EA5638}"
+              DTS:DTSID="{1E7A6FEB-A161-48E5-87E2-8D65A802080A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -123,7 +122,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;Total Individuals&quot;"
-              DTS:DTSID="{A72C8DC8-64BC-462A-ACB0-C4BFEB03169C}"
+              DTS:DTSID="{ADAC2A32-6C9C-4830-B6A1-89DDB0814DEC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -132,7 +131,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;Podgrupa&quot;"
-              DTS:DTSID="{D28A4CC6-6260-495C-9B59-C1ABDA60A169}"
+              DTS:DTSID="{EF3994D9-72DE-4A9D-9D9F-DCD15135B00A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -141,7 +140,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;A16-49&quot;"
-              DTS:DTSID="{CE2DA046-56E7-40D3-9AE3-041C3C01FCBE}"
+              DTS:DTSID="{1733BBC1-3ABB-4675-BBCE-0A57D69F9E5A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -150,7 +149,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;M16-49&quot;"
-              DTS:DTSID="{083BD11F-0000-445D-BF9C-07C9D3C04DEA}"
+              DTS:DTSID="{244F153F-2FA0-4A75-9C25-57F35EDC5FBE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -159,7 +158,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;A4-15&quot;"
-              DTS:DTSID="{3C4CDFA3-FE2D-4606-B3D6-F4EC6B075788}"
+              DTS:DTSID="{D5C00836-3A5E-4E4A-8B41-2782590FA38B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -168,7 +167,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;A4-9&quot;"
-              DTS:DTSID="{B59017C9-21B2-44D8-A926-BF6A3EA78229}"
+              DTS:DTSID="{6EAEF633-989B-45BF-AB9D-0FDF6CF9714B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -177,7 +176,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 13"
-              DTS:DTSID="{DD610C69-86A0-41E6-89F0-9EC4EDC5E6C7}"
+              DTS:DTSID="{012E4B64-B57E-40D2-ACE1-3490614A78A9}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -244,7 +243,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;Date&quot;"
-              DTS:DTSID="{DC2A58AF-1B8A-4A34-AC64-2134720B7059}"
+              DTS:DTSID="{124B3B38-9983-4439-9C1F-96EADA848528}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -253,7 +252,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;Channel&quot;"
-              DTS:DTSID="{7EFBD7D4-5354-459A-A600-94825E9C3F52}"
+              DTS:DTSID="{929EE0F6-7398-4E19-AD70-6405EC742328}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -262,7 +261,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;Description&quot;"
-              DTS:DTSID="{EA6D8395-F50E-434F-91C7-B430AFB990DD}"
+              DTS:DTSID="{29F55015-368A-419D-B002-475E143C5E05}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -271,7 +270,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;2nd Description&quot;"
-              DTS:DTSID="{F151D677-5652-43B0-B04B-86DD285E35A8}"
+              DTS:DTSID="{5A3C25A0-E7B5-4283-8A3A-4ECAB3C3EB5D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -280,7 +279,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;Start time&quot;"
-              DTS:DTSID="{D099E2E8-0189-4EFE-9C7A-B04A9D6ED52B}"
+              DTS:DTSID="{0E8BB1CA-90E5-4F28-A20E-7CC05F849C82}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -289,7 +288,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;Duration&quot;"
-              DTS:DTSID="{F0890041-B734-47DE-A435-81633DD23314}"
+              DTS:DTSID="{6B63F76A-B257-40C7-B0E5-90EF74D43E10}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -298,7 +297,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;Variable Target&quot;"
-              DTS:DTSID="{EF70F300-6562-4887-A9D2-D830C71E2A3D}"
+              DTS:DTSID="{04F0D542-635C-481F-910D-A60344A6EA51}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -307,7 +306,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;Total Individuals&quot;"
-              DTS:DTSID="{199B732B-1DAA-4452-8E47-895290955E8F}"
+              DTS:DTSID="{5DD532FC-F153-4B66-A1B1-675A9BBFB300}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -316,7 +315,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;Podgrupa&quot;"
-              DTS:DTSID="{616C98D9-A896-4A07-8B5B-AD33F7F17CCB}"
+              DTS:DTSID="{9CBCE9C2-EA45-411A-9ABC-2CD82CF5299C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -325,7 +324,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;A16-49&quot;"
-              DTS:DTSID="{32EEEEC2-3487-4C7B-86F1-FF7DA7C0AC65}"
+              DTS:DTSID="{19176D78-E4AF-4635-AF4D-21092E1DC149}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -334,7 +333,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;M16-49&quot;"
-              DTS:DTSID="{DBBE5C84-AAE6-48B5-875E-9AC2E4A7D439}"
+              DTS:DTSID="{513F2321-8824-49DC-A0EC-021E98A1449F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -343,7 +342,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;A4-15&quot;"
-              DTS:DTSID="{5D016712-CBBC-421F-9BAD-D38453ADBB10}"
+              DTS:DTSID="{D88EE40D-AC61-4165-88B2-64F71864C8AF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -352,7 +351,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;A4-9&quot;"
-              DTS:DTSID="{68CFD183-6C56-4F40-838C-7A6FB7819D23}"
+              DTS:DTSID="{663E05E6-15E0-4373-895A-7E85C462FB11}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -361,34 +360,9 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 13"
-              DTS:DTSID="{799B2740-F92F-4F76-B40A-8A5D2D7A61FD}"
+              DTS:DTSID="{AF9013ED-AF48-4CA3-8206-C283EBB02037}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage.hd-admin]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{AA94294D-64E3-4AAC-9F1F-C110EC7D61B1}"
-      DTS:ObjectName="hd-stage-server.database.windows.net.hd-stage.hd-admin">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=hd-stage-server.database.windows.net;User ID=hd-admin;Initial Catalog=hd-stage;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage_2018-05-10T08-35Z.hd-admin]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{A60D3444-1B7F-4DCE-9500-AE5EB37B6E9E}"
-      DTS:ObjectName="hd-stage-server.database.windows.net.hd-stage_2018-05-10T08-35Z.hd-admin">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=hd-stage-server.database.windows.net;User ID=hd-admin;Initial Catalog=hd-stage_2018-05-10T08-35Z;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAu3tycJmXPECAEZP8r311BAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABGyfWjRJ7cd+Lab3UhjryoEDOwnBemvoBsraQ+ZoZFVQAAAAAOgAAAAAIAACAAAACCFg864lNwEVyx/OeMW7qOijvi/RpH8npcrmYE9ghEACAAAABOJwhb99sR0GQW5B7xz0pb6az1TVt4+z22f/eObn00g0AAAABiJFs0/9+i879ZTeqgg66mr0V5vtLosxHZZ9OeyGWXIlKu6agaKypwb+n4vv2KflIyO4GN2C9OkP9Cwh2+FsKj</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -492,7 +466,7 @@
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;Description&quot;]"
-                      length="50"
+                      length="100"
                       lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;Description&quot;]"
                       name="&quot;Description&quot;"
                       truncationRowDisposition="FailComponent">
@@ -514,7 +488,7 @@
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;2nd Description&quot;]"
-                      length="50"
+                      length="100"
                       lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;2nd Description&quot;]"
                       name="&quot;2nd Description&quot;"
                       truncationRowDisposition="FailComponent">
@@ -768,13 +742,13 @@
                       refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;Description&quot;]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="100"
                       name="&quot;Description&quot;" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;2nd Description&quot;]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="100"
                       name="&quot;2nd Description&quot;" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].ExternalColumns[&quot;Start time&quot;]"
@@ -1167,8 +1141,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage_2018-05-10T08-35Z.hd-admin]"
-                  connectionManagerRefId="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage_2018-05-10T08-35Z.hd-admin]"
+                  connectionManagerID="Package.ConnectionManagers[DANIEL-PC.stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DANIEL-PC.stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1200,7 +1174,7 @@
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Description&quot;]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="50"
+                      cachedLength="100"
                       cachedName="&quot;Description&quot;"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
                       lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;Description&quot;]" />
@@ -1208,7 +1182,7 @@
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;2nd Description&quot;]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="50"
+                      cachedLength="100"
                       cachedName="&quot;2nd Description&quot;"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[2nd Description]"
                       lineageId="Package\Data Flow Task\Event.Outputs[Flat File Source Output].Columns[&quot;2nd Description&quot;]" />
@@ -1456,8 +1430,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination 1.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage_2018-05-10T08-35Z.hd-admin]"
-                  connectionManagerRefId="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage_2018-05-10T08-35Z.hd-admin]"
+                  connectionManagerID="Package.ConnectionManagers[DANIEL-PC.stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DANIEL-PC.stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1587,8 +1561,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination 2.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage_2018-05-10T08-35Z.hd-admin]"
-                  connectionManagerRefId="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage_2018-05-10T08-35Z.hd-admin]"
+                  connectionManagerID="Package.ConnectionManagers[DANIEL-PC.stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DANIEL-PC.stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1627,7 +1601,7 @@
                       name="Nazwa" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination 2.Inputs[OLE DB Destination Input].ExternalColumns[ngr]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="50"
                       name="ngr" />
@@ -1718,8 +1692,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination 3.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage_2018-05-10T08-35Z.hd-admin]"
-                  connectionManagerRefId="Package.ConnectionManagers[hd-stage-server.database.windows.net.hd-stage_2018-05-10T08-35Z.hd-admin]"
+                  connectionManagerID="Package.ConnectionManagers[DANIEL-PC.stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DANIEL-PC.stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1911,14 +1885,14 @@
           <paths>
             <path
               refId="Package\Data Flow Task.Paths[Excel Source Output]"
-              endId="Package\Data Flow Task\OLE DB Destination 2.Inputs[OLE DB Destination Input]"
-              name="Excel Source Output"
-              startId="Package\Data Flow Task\Grupy mediowe.Outputs[Excel Source Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Excel Source Output1]"
               endId="Package\Data Flow Task\OLE DB Destination 3.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
               startId="Package\Data Flow Task\Kategorie.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Excel Source Output1]"
+              endId="Package\Data Flow Task\OLE DB Destination 2.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task\Grupy mediowe.Outputs[Excel Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Flat File Source Output]"
               endId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
@@ -2704,7 +2678,660 @@
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{7E1EB7DC-87BD-431B-AD47-A15DBD145D2C}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{7307494E-29F9-473D-AB61-4CF99DC8A955}"
+          SQLTask:SqlStatementSource="DECLARE kurs CURSOR FOR SELECT Nr,Nazwa,ngr FROM [Media.group]&#xA;DECLARE @Nr int, @Nazwa varchar(50), @ngr varchar(50), @gr varchar(20)&#xA;OPEN kurs&#xA;FETCH NEXT FROM kurs&#xA;INTO @Nr, @Nazwa, @ngr&#xA;WHILE @@FETCH_STATUS = 0&#xA;  BEGIN&#xA;    IF @Nr IS NULL&#xA;      BEGIN&#xA;        SET @gr = @Nazwa&#xA;      END&#xA;    IF @Nr &gt; 0&#xA;      BEGIN&#xA;        UPDATE [Media.group]&#xA;        SET ngr = @gr&#xA;        WHERE Nazwa = @Nazwa&#xA;      END&#xA;    FETCH NEXT FROM kurs&#xA;    INTO @Nr, @Nazwa, @ngr&#xA;  END&#xA;CLOSE kurs&#xA;DEALLOCATE kurs" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Kanal"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{964AB00A-AC86-48A1-8D24-355AEDFD4AD7}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Kanal"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Kanal\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Kanal\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Kanal\Data Conversion.Inputs[Data Conversion Input].Columns[F1]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="F1"
+                      lineageId="Package\Kanal\Excel Source.Outputs[Excel Source Output].Columns[F1]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Kanal\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Kanal\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Kanal\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of F1]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Kanal\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of F1]"
+                      name="Copy of F1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Kanal\Excel Source.Outputs[Excel Source Output].Columns[F1]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Kanal\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Kanal\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Kanal\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Kanal\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Kanal\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Kanal\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Kanal\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'kategorie $'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Kanal\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Kanal\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Kanal\Excel Source.Outputs[Excel Source Output].Columns[F1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Kanal\Excel Source.Outputs[Excel Source Output].ExternalColumns[F1]"
+                      length="255"
+                      lineageId="Package\Kanal\Excel Source.Outputs[Excel Source Output].Columns[F1]"
+                      name="F1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Kanal\Excel Source.Outputs[Excel Source Output].Columns[F2]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Kanal\Excel Source.Outputs[Excel Source Output].ExternalColumns[F2]"
+                      length="255"
+                      lineageId="Package\Kanal\Excel Source.Outputs[Excel Source Output].Columns[F2]"
+                      name="F2"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Kanal\Excel Source.Outputs[Excel Source Output].ExternalColumns[F1]"
+                      dataType="wstr"
+                      length="255"
+                      name="F1" />
+                    <externalMetadataColumn
+                      refId="Package\Kanal\Excel Source.Outputs[Excel Source Output].ExternalColumns[F2]"
+                      dataType="wstr"
+                      length="255"
+                      name="F2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Kanal\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Kanal\Excel Source.Outputs[Excel Source Error Output].Columns[F1]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Kanal\Excel Source.Outputs[Excel Source Error Output].Columns[F1]"
+                      name="F1" />
+                    <outputColumn
+                      refId="Package\Kanal\Excel Source.Outputs[Excel Source Error Output].Columns[F2]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Kanal\Excel Source.Outputs[Excel Source Error Output].Columns[F2]"
+                      name="F2" />
+                    <outputColumn
+                      refId="Package\Kanal\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Kanal\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Kanal\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Kanal\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Kanal\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[channel]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Kanal\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DANIEL-PC.stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DANIEL-PC.stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Kanal\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Kanal\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of F1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Copy of F1"
+                      externalMetadataColumnId="Package\Kanal\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[chan_name]"
+                      lineageId="Package\Kanal\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of F1]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Kanal\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[chan_id]"
+                      dataType="i4"
+                      name="chan_id" />
+                    <externalMetadataColumn
+                      refId="Package\Kanal\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[chan_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="chan_name" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Kanal\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Kanal\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Kanal\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Kanal\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Kanal\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Kanal\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Kanal.Paths[Data Conversion Output]"
+              endId="Package\Kanal\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Kanal\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Kanal.Paths[Excel Source Output]"
+              endId="Package\Kanal\Data Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Kanal\Excel Source.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Media gr"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{39825C52-C3E4-4214-894A-E164D7F175BB}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Media gr"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Media gr\Grupy mediowe"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Grupy mediowe"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'grupy mediowe$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Media gr\Grupy mediowe.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Media gr\Grupy mediowe.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Media gr\Grupy mediowe.Outputs[Excel Source Output].Columns[F1]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Media gr\Grupy mediowe.Outputs[Excel Source Output].ExternalColumns[F1]"
+                      lineageId="Package\Media gr\Grupy mediowe.Outputs[Excel Source Output].Columns[F1]"
+                      name="F1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Media gr\Grupy mediowe.Outputs[Excel Source Output].Columns[F2]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Media gr\Grupy mediowe.Outputs[Excel Source Output].ExternalColumns[F2]"
+                      length="255"
+                      lineageId="Package\Media gr\Grupy mediowe.Outputs[Excel Source Output].Columns[F2]"
+                      name="F2"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Media gr\Grupy mediowe.Outputs[Excel Source Output].ExternalColumns[F1]"
+                      dataType="r8"
+                      name="F1" />
+                    <externalMetadataColumn
+                      refId="Package\Media gr\Grupy mediowe.Outputs[Excel Source Output].ExternalColumns[F2]"
+                      dataType="wstr"
+                      length="255"
+                      name="F2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Media gr\Grupy mediowe.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Media gr\Grupy mediowe.Outputs[Excel Source Error Output].Columns[F1]"
+                      dataType="r8"
+                      lineageId="Package\Media gr\Grupy mediowe.Outputs[Excel Source Error Output].Columns[F1]"
+                      name="F1" />
+                    <outputColumn
+                      refId="Package\Media gr\Grupy mediowe.Outputs[Excel Source Error Output].Columns[F2]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Media gr\Grupy mediowe.Outputs[Excel Source Error Output].Columns[F2]"
+                      name="F2" />
+                    <outputColumn
+                      refId="Package\Media gr\Grupy mediowe.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Media gr\Grupy mediowe.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Media gr\Grupy mediowe.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Media gr\Grupy mediowe.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Media gr\OLE DB Destination 2"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination 2"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Media.group]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Media gr\OLE DB Destination 2.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DANIEL-PC.stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DANIEL-PC.stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Media gr\OLE DB Destination 2.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Media gr\OLE DB Destination 2.Inputs[OLE DB Destination Input].Columns[F1]"
+                      cachedDataType="r8"
+                      cachedName="F1"
+                      externalMetadataColumnId="Package\Media gr\OLE DB Destination 2.Inputs[OLE DB Destination Input].ExternalColumns[Nr]"
+                      lineageId="Package\Media gr\Grupy mediowe.Outputs[Excel Source Output].Columns[F1]" />
+                    <inputColumn
+                      refId="Package\Media gr\OLE DB Destination 2.Inputs[OLE DB Destination Input].Columns[F2]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="F2"
+                      externalMetadataColumnId="Package\Media gr\OLE DB Destination 2.Inputs[OLE DB Destination Input].ExternalColumns[Nazwa]"
+                      lineageId="Package\Media gr\Grupy mediowe.Outputs[Excel Source Output].Columns[F2]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Media gr\OLE DB Destination 2.Inputs[OLE DB Destination Input].ExternalColumns[Nr]"
+                      dataType="r8"
+                      name="Nr" />
+                    <externalMetadataColumn
+                      refId="Package\Media gr\OLE DB Destination 2.Inputs[OLE DB Destination Input].ExternalColumns[Nazwa]"
+                      dataType="wstr"
+                      length="255"
+                      name="Nazwa" />
+                    <externalMetadataColumn
+                      refId="Package\Media gr\OLE DB Destination 2.Inputs[OLE DB Destination Input].ExternalColumns[ngr]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="ngr" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Media gr\OLE DB Destination 2.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Media gr\OLE DB Destination 2.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Media gr\OLE DB Destination 2.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Media gr\OLE DB Destination 2.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Media gr\OLE DB Destination 2.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Media gr\OLE DB Destination 2.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Media gr.Paths[Excel Source Output]"
+              endId="Package\Media gr\OLE DB Destination 2.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Media gr\Grupy mediowe.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{EB9AAE74-372C-4FE3-9A92-C64C0176CA76}"
+      DTS:From="Package\Media gr"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Execute SQL Task" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -2716,7 +3343,7 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="152,41.6"
           Id="Package\Data Flow Task"
@@ -2725,6 +3352,52 @@
           Size="160,41.6"
           Id="Package\Data Flow Task 1"
           TopLeft="296.57143362201,81.9764717379243" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Execute SQL Task"
+          TopLeft="274.857147537932,313.835298519069" />
+        <NodeLayout
+          Size="104,41.6"
+          Id="Package\Kanal"
+          TopLeft="104.571430352269,185.976473196485" />
+        <NodeLayout
+          Size="119.2,41.6"
+          Id="Package\Media gr"
+          TopLeft="284.571433417651,229.411767923296" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="344.171433417651,271.011767923296">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="11.8857141202809,42.8235305957729"
+              Start="0,0"
+              End="11.8857141202809,35.3235305957729">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.4117652978865" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.4117652978865"
+                    Point2="0,21.4117652978865"
+                    Point3="4,21.4117652978865" />
+                  <mssgle:LineSegment
+                    End="7.88571412028091,21.4117652978865" />
+                  <mssgle:CubicBezierSegment
+                    Point1="7.88571412028091,21.4117652978865"
+                    Point2="11.8857141202809,21.4117652978865"
+                    Point3="11.8857141202809,25.4117652978865" />
+                  <mssgle:LineSegment
+                    End="11.8857141202809,35.3235305957729" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -2750,7 +3423,7 @@
           Id="Package\Data Flow Task\OLE DB Destination 3"
           TopLeft="676.428582948081,182.000002552481" />
         <NodeLayout
-          Size="172,41.6"
+          Size="170.4,41.6"
           Id="Package\Data Flow Task\OLE DB Destination"
           TopLeft="20.8571413731088,133.128627081125" />
         <NodeLayout
@@ -2767,30 +3440,30 @@
           TopLeft="437.457150279746,144.376472613061" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Excel Source Output]"
-          TopLeft="537.504769808797,80.4572554384919">
+          TopLeft="749.45715457128,102.776471446212">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-9.6476195290511,63.9192171745691"
+              EndConnector="16.971428376801,79.2235311062688"
               Start="0,0"
-              End="-9.6476195290511,56.4192171745691">
+              End="16.971428376801,71.7235311062688">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.9596085872845" />
+                    End="0,35.6117655531344" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,27.9596085872845"
-                    Point2="0,31.9596085872845"
-                    Point3="-4,31.9596085872845" />
+                    Point1="0,35.6117655531344"
+                    Point2="0,39.6117655531344"
+                    Point3="4,39.6117655531344" />
                   <mssgle:LineSegment
-                    End="-5.6476195290511,31.9596085872845" />
+                    End="12.971428376801,39.6117655531344" />
                   <mssgle:CubicBezierSegment
-                    Point1="-5.6476195290511,31.9596085872845"
-                    Point2="-9.6476195290511,31.9596085872845"
-                    Point3="-9.6476195290511,35.9596085872845" />
+                    Point1="12.971428376801,39.6117655531344"
+                    Point2="16.971428376801,39.6117655531344"
+                    Point3="16.971428376801,43.6117655531344" />
                   <mssgle:LineSegment
-                    End="-9.6476195290511,56.4192171745691" />
+                    End="16.971428376801,71.7235311062688" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2807,9 +3480,9 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="23.199999727522,76.0815686243807"
+              EndConnector="22.399999727522,76.0815686243807"
               Start="0,0"
-              End="23.199999727522,68.5815686243807">
+              End="22.399999727522,68.5815686243807">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2820,13 +3493,13 @@
                     Point2="0,38.0407843121903"
                     Point3="4,38.0407843121903" />
                   <mssgle:LineSegment
-                    End="19.199999727522,38.0407843121903" />
+                    End="18.399999727522,38.0407843121903" />
                   <mssgle:CubicBezierSegment
-                    Point1="19.199999727522,38.0407843121903"
-                    Point2="23.199999727522,38.0407843121903"
-                    Point3="23.199999727522,42.0407843121903" />
+                    Point1="18.399999727522,38.0407843121903"
+                    Point2="22.399999727522,38.0407843121903"
+                    Point3="22.399999727522,42.0407843121903" />
                   <mssgle:LineSegment
-                    End="23.199999727522,68.5815686243807" />
+                    End="22.399999727522,68.5815686243807" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2875,30 +3548,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Excel Source Output1]"
-          TopLeft="749.45715457128,102.776471446212">
+          TopLeft="537.504769808797,80.4572554384919">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="16.971428376801,79.2235311062688"
+              EndConnector="-9.6476195290511,63.9192171745691"
               Start="0,0"
-              End="16.971428376801,71.7235311062688">
+              End="-9.6476195290511,56.4192171745691">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,35.6117655531344" />
+                    End="0,27.9596085872845" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,35.6117655531344"
-                    Point2="0,39.6117655531344"
-                    Point3="4,39.6117655531344" />
+                    Point1="0,27.9596085872845"
+                    Point2="0,31.9596085872845"
+                    Point3="-4,31.9596085872845" />
                   <mssgle:LineSegment
-                    End="12.971428376801,39.6117655531344" />
+                    End="-5.6476195290511,31.9596085872845" />
                   <mssgle:CubicBezierSegment
-                    Point1="12.971428376801,39.6117655531344"
-                    Point2="16.971428376801,39.6117655531344"
-                    Point3="16.971428376801,43.6117655531344" />
+                    Point1="-5.6476195290511,31.9596085872845"
+                    Point2="-9.6476195290511,31.9596085872845"
+                    Point3="-9.6476195290511,35.9596085872845" />
                   <mssgle:LineSegment
-                    End="16.971428376801,71.7235311062688" />
+                    End="-9.6476195290511,56.4192171745691" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2996,39 +3669,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="172,41.6"
-          Id="Package\Data Flow Task 1\OLE DB Destination"
-          TopLeft="60,177.681568624381" />
-        <NodeLayout
           Size="104.8,41.6"
           Id="Package\Data Flow Task 1\Event"
           TopLeft="70.400000272478,60" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Data Flow Task 1\OLE DB Destination"
+          TopLeft="34.8571424289626,335.516864955609" />
         <EdgeLayout
           Id="Package\Data Flow Task 1.Paths[Flat File Source Output]"
-          TopLeft="122.800000272478,101.6">
+          TopLeft="121.42857135072,101.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="23.199999727522,76.0815686243807"
+              EndConnector="0,233.916864955609"
               Start="0,0"
-              End="23.199999727522,68.5815686243807">
+              End="0,226.416864955609">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.0407843121903" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,34.0407843121903"
-                    Point2="0,38.0407843121903"
-                    Point3="4,38.0407843121903" />
-                  <mssgle:LineSegment
-                    End="19.199999727522,38.0407843121903" />
-                  <mssgle:CubicBezierSegment
-                    Point1="19.199999727522,38.0407843121903"
-                    Point2="23.199999727522,38.0407843121903"
-                    Point3="23.199999727522,42.0407843121903" />
-                  <mssgle:LineSegment
-                    End="23.199999727522,68.5815686243807" />
+                    End="0,226.416864955609" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3040,6 +3701,190 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <TaskHost
+    design-time-name="Package\Kanal">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\Kanal\Excel Source"
+          TopLeft="130.4,33.6" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Kanal\OLE DB Destination"
+          TopLeft="108,245.6" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\Kanal\Data Conversion"
+          TopLeft="112,144" />
+        <EdgeLayout
+          Id="Package\Kanal.Paths[Excel Source Output]"
+          TopLeft="199.6,75.2">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-10,68.8"
+              Start="0,0"
+              End="-10,61.3">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.4" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.4"
+                    Point2="0,34.4"
+                    Point3="-4,34.4" />
+                  <mssgle:LineSegment
+                    End="-6,34.4" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-6,34.4"
+                    Point2="-10,34.4"
+                    Point3="-10,38.4" />
+                  <mssgle:LineSegment
+                    End="-10,61.3" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Kanal.Paths[Data Conversion Output]"
+          TopLeft="191.4,185.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000001"
+              Start="0,0"
+              End="0,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Kanal\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Kanal\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Media gr">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\Media gr\Grupy mediowe"
+          TopLeft="84.4476195290511,60" />
+        <NodeLayout
+          Size="180.8,41.6"
+          Id="Package\Media gr\OLE DB Destination 2"
+          TopLeft="60,165.519217174569" />
+        <EdgeLayout
+          Id="Package\Media gr.Paths[Excel Source Output]"
+          TopLeft="160.047619529051,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-9.6476195290511,63.9192171745691"
+              Start="0,0"
+              End="-9.6476195290511,56.4192171745691">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.9596085872845" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.9596085872845"
+                    Point2="0,31.9596085872845"
+                    Point3="-4,31.9596085872845" />
+                  <mssgle:LineSegment
+                    End="-5.6476195290511,31.9596085872845" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5.6476195290511,31.9596085872845"
+                    Point2="-9.6476195290511,31.9596085872845"
+                    Point3="-9.6476195290511,35.9596085872845" />
+                  <mssgle:LineSegment
+                    End="-9.6476195290511,56.4192171745691" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Media gr\Grupy mediowe">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Media gr\OLE DB Destination 2">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task 1\OLE DB Destination">
     <Properties>
