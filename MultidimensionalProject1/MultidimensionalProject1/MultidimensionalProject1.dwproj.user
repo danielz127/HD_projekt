@@ -17,8 +17,8 @@
             <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcIOOfvs/WUKbomNBsir73QAAAAASAAAASABkAC0AcwB0AGEAZwBlAAAAEGYAAAABAAAgAAAA/Vf4ahqwajSNkrgChEoWcF46tZDcmg5+3gIWmWhikRcAAAAADoAAAAACAAAgAAAALbfjunpK8aLtWnF9yXiofuzUDSKikGhj57IkFjxTYLQgAAAAcbVN4bCR4gxW3TC107tjOOJD9ASTRRUyYz2xNoxuptFAAAAAg4UPqFj+IPmkgxQwwMjrRivvUhxy/Zc42H4VE7Rx6LAqqdUBexfbV4XdLI8U+h3hxIapLyWwGUtveQn+xD/e8A==</Value>
           </ConfigurationSetting>
         </UserPasswords>
-        <TargetServer>DANIEL-PC</TargetServer>
-        <TargetDatabase>hd</TargetDatabase>
+        <TargetServer>localhost</TargetServer>
+        <TargetDatabase>jar_cube</TargetDatabase>
         <StartObject>
           <ObjectId></ObjectId>
           <ObjectType>Current</ObjectType>

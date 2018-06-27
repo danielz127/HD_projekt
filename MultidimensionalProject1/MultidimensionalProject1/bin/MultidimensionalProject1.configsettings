@@ -2,8 +2,8 @@
   <Database>
     <DataSources>
       <DataSource>
-        <ID>HD-baza</ID>
-        <ConnectionString>Provider=SQLNCLI11.1;Data Source=server-hd.database.windows.net;Password=;User ID=;Initial Catalog=HD-baza</ConnectionString>
+        <ID>Jar Hd</ID>
+        <ConnectionString>Provider=SQLNCLI11.1;Data Source=LENOVO;Integrated Security=SSPI;Initial Catalog=jar_hd</ConnectionString>
         <ImpersonationInfo>
           <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">ImpersonateServiceAccount</ImpersonationMode>
           <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>
@@ -12,22 +12,25 @@
     </DataSources>
     <Dimensions>
       <Dimension>
-        <ID>Kanał</ID>
+        <ID>Channel</ID>
       </Dimension>
       <Dimension>
-        <ID>Kategoria kanału</ID>
+        <ID>Channel Category</ID>
       </Dimension>
       <Dimension>
-        <ID>Data</ID>
+        <ID>Date</ID>
       </Dimension>
       <Dimension>
-        <ID>Grupa mediowa</ID>
+        <ID>Media Group</ID>
       </Dimension>
       <Dimension>
-        <ID>Grupa docelowa</ID>
+        <ID>Program</ID>
       </Dimension>
       <Dimension>
-        <ID>Czas</ID>
+        <ID>Target Group</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Time Table</ID>
       </Dimension>
       <Dimension>
         <ID>Event</ID>
@@ -35,7 +38,7 @@
     </Dimensions>
     <Cubes>
       <Cube>
-        <ID>HD-baza</ID>
+        <ID>Jar Hd</ID>
         <MeasureGroups>
           <MeasureGroup>
             <ID>Parametr</ID>

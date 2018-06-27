@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Excel Connection Manager"
+  DTS:DTSID="{EA4EFC02-1199-42FF-8568-9DF583CBDE9F}"
+  DTS:CreationName="EXCEL">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Radek\Desktop\HD_projekt-master\sources\HD_projekt_kategorie-kanałow.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=NO&quot;;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

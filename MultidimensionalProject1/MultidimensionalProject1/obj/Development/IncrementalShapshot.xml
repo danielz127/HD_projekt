@@ -1,14 +1,14 @@
 ﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
   <Target>
-    <Database>hd</Database>
-    <Server>DANIEL-PC</Server>
-    <ConnectionString>Data Source=DANIEL-PC;Timeout=0</ConnectionString>
+    <Database>jar_cube</Database>
+    <Server>localhost</Server>
+    <ConnectionString>Data Source=localhost;Timeout=0</ConnectionString>
   </Target>
   <Options>
     <TransactionalDeployment>false</TransactionalDeployment>
     <PartitionDeployment>DeployPartitions</PartitionDeployment>
     <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
-    <ProcessingOption>Default</ProcessingOption>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
     <OutputScript></OutputScript>
     <ImpactAnalysisFile></ImpactAnalysisFile>
     <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
@@ -19,85 +19,92 @@
     <ObjectSnapshots>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
-        <TimeStamp>+mYmoEy06M64YwN7k2+KX1JiIZE=31.05.2018 20:17:5931.05.2018 20:17:59</TimeStamp>
+        <TimeStamp>0garpD/6vt9ZVdYXhHILKN379sc=26.06.2018 22:11:1926.06.2018 22:11:19</TimeStamp>
         <ID>
-          <String>HD-baza</String>
+          <String>Jar Hd</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>Qq27LoWOrc05xk1P/QGPHqgSJEg=04.06.2018 11:34:5603.06.2018 20:44:07</TimeStamp>
+        <TimeStamp>iePXAHZd20l0fR4FBU9yIQ0TqHI=26.06.2018 22:21:2426.06.2018 22:12:23</TimeStamp>
         <ID>
-          <String>HD-baza</String>
+          <String>Jar Hd</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>IhZfcwSyvjVW4rNPXoZRC2mnd9Q=04.06.2018 11:34:5703.06.2018 20:47:48</TimeStamp>
+        <TimeStamp>Rb8tOfi9SHFHJ+kG3bhZcTnqQOs=27.06.2018 00:11:4426.06.2018 22:22:35</TimeStamp>
         <ID>
-          <String>Kanał</String>
+          <String>Channel</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>JSnz5farOARdPbw3n3+rGc2qtXo=04.06.2018 11:34:5703.06.2018 20:52:37</TimeStamp>
+        <TimeStamp>Hoi85PpgKT8RyGIgSGoeFliRiAk=27.06.2018 00:11:4426.06.2018 22:22:53</TimeStamp>
         <ID>
-          <String>Kategoria kanału</String>
+          <String>Channel Category</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>2xz5KEwRvVsdhOvG4UjvCiTY5BA=04.06.2018 11:35:4003.06.2018 20:56:42</TimeStamp>
+        <TimeStamp>qm8eAsKxUahxmayNEawuocGl14Q=27.06.2018 00:11:4426.06.2018 22:23:39</TimeStamp>
         <ID>
-          <String>Data</String>
+          <String>Date</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>QEm+zPLCMKP3fvH6O3nld8Ufibg=03.06.2018 21:06:5303.06.2018 21:05:22</TimeStamp>
+        <TimeStamp>wbH54RYs78VDSodxRzd/U+31s0Q=27.06.2018 00:11:4426.06.2018 22:25:46</TimeStamp>
         <ID>
-          <String>Grupa mediowa</String>
+          <String>Media Group</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>xBtGoOGHTsU8+1WjlFgC7fqNQvE=03.06.2018 21:08:4303.06.2018 21:06:53</TimeStamp>
+        <TimeStamp>156U86+hi/S/Go3TWAZ02Bg7mZg=27.06.2018 00:11:4426.06.2018 22:26:11</TimeStamp>
         <ID>
-          <String>Grupa docelowa</String>
+          <String>Program</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>JV9lSAjHmdOuXvRn+Fb0xurS5bo=03.06.2018 21:14:3103.06.2018 21:08:43</TimeStamp>
+        <TimeStamp>aL2gBSHIdcGg9wC97ctkU58wW7Q=27.06.2018 00:11:4426.06.2018 22:26:25</TimeStamp>
         <ID>
-          <String>Czas</String>
+          <String>Target Group</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>DpDs2YMMKM2elWARla4SpjcWXh0=04.06.2018 11:34:5603.06.2018 21:56:45</TimeStamp>
+        <TimeStamp>pWByylaq+HWWBOCUgeO/SAYgxS8=27.06.2018 00:11:4426.06.2018 22:26:54</TimeStamp>
+        <ID>
+          <String>Time Table</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>/eWFf77AzQtLp0aHGjaE1yW3sGU=27.06.2018 00:11:4426.06.2018 22:46:01</TimeStamp>
         <ID>
           <String>Event</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>I3f939hOlmEMo09tXu586V6eZdY=04.06.2018 12:15:2803.06.2018 22:05:42ZYU0EyUJerQUbxLrjbxhWOMVboo=03.06.2018 22:05:4203.06.2018 22:05:42</TimeStamp>
+        <TimeStamp>OH4+QRr6ZCAKVW8ux2Z7YheIr8Q=27.06.2018 00:14:0226.06.2018 22:48:51y43wInVjTec0u4zf9v3pDJCPJWY=26.06.2018 22:48:5126.06.2018 22:48:51</TimeStamp>
         <ID>
-          <String>HD-baza</String>
+          <String>Jar Hd</String>
         </ID>
       </ObjectSnapshot>
     </ObjectSnapshots>
     <DatabaseSnapshot>
       <Type>Microsoft.AnalysisServices.Database</Type>
-      <TimeStamp>QdeQB7bk9Z4NnH0Gs6Df5CJBmnc=15.05.2018 23:02:4815.05.2018 23:02:48</TimeStamp>
+      <TimeStamp>QdeQB7bk9Z4NnH0Gs6Df5CJBmnc=26.06.2018 18:06:0326.06.2018 18:08:33</TimeStamp>
       <ID>
-        <String>hd</String>
+        <String>jar_cube</String>
       </ID>
     </DatabaseSnapshot>
     <Granularity>Coarse</Granularity>
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2018-06-04T10:15:57.16Z</LastDeployed>
+  <LastDeployed>2018-06-26T22:14:06.053333Z</LastDeployed>
 </DeploymentSnapshot>
